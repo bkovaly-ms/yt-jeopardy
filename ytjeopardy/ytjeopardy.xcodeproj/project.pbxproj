@@ -16,6 +16,8 @@
 		CA03A7691B66B1610019B2D4 /* SetupStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA03A7671B66B1610019B2D4 /* SetupStoryboard.storyboard */; };
 		CA03A76C1B66B17C0019B2D4 /* GameScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA03A76A1B66B17C0019B2D4 /* GameScreen.storyboard */; };
 		CA03A76F1B66B1B00019B2D4 /* Question.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA03A76D1B66B1B00019B2D4 /* Question.storyboard */; };
+		CA03A7761B67F36B0019B2D4 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = CA03A7751B67F36B0019B2D4 /* Question.m */; };
+		CA03A7791B67F4300019B2D4 /* Team.m in Sources */ = {isa = PBXBuildFile; fileRef = CA03A7781B67F4300019B2D4 /* Team.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,10 @@
 		CA03A7681B66B1610019B2D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SetupStoryboard.storyboard; sourceTree = "<group>"; };
 		CA03A76B1B66B17C0019B2D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/GameScreen.storyboard; sourceTree = "<group>"; };
 		CA03A76E1B66B1B00019B2D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Question.storyboard; sourceTree = "<group>"; };
+		CA03A7741B67F36B0019B2D4 /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
+		CA03A7751B67F36B0019B2D4 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
+		CA03A7771B67F4300019B2D4 /* Team.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Team.h; sourceTree = "<group>"; };
+		CA03A7781B67F4300019B2D4 /* Team.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Team.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,10 @@
 				CA03A7671B66B1610019B2D4 /* SetupStoryboard.storyboard */,
 				CA03A76A1B66B17C0019B2D4 /* GameScreen.storyboard */,
 				CA03A76D1B66B1B00019B2D4 /* Question.storyboard */,
+				CA03A7741B67F36B0019B2D4 /* Question.h */,
+				CA03A7751B67F36B0019B2D4 /* Question.m */,
+				CA03A7771B67F4300019B2D4 /* Team.h */,
+				CA03A7781B67F4300019B2D4 /* Team.m */,
 			);
 			path = ytjeopardy;
 			sourceTree = "<group>";
@@ -227,7 +237,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA03A7791B67F4300019B2D4 /* Team.m in Sources */,
 				CA03A74A1B66B0D20019B2D4 /* ViewController.m in Sources */,
+				CA03A7761B67F36B0019B2D4 /* Question.m in Sources */,
 				CA03A7471B66B0D20019B2D4 /* AppDelegate.m in Sources */,
 				CA03A7441B66B0D20019B2D4 /* main.m in Sources */,
 			);
