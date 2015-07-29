@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2189E18C1B6947830071BBE5 /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2189E18B1B6947830071BBE5 /* QuestionViewController.m */; };
 		CA03A7441B66B0D20019B2D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA03A7431B66B0D20019B2D4 /* main.m */; };
 		CA03A7471B66B0D20019B2D4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA03A7461B66B0D20019B2D4 /* AppDelegate.m */; };
 		CA03A74A1B66B0D20019B2D4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA03A7491B66B0D20019B2D4 /* ViewController.m */; };
@@ -31,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2189E18A1B6947830071BBE5 /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionViewController.h; sourceTree = "<group>"; };
+		2189E18B1B6947830071BBE5 /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionViewController.m; sourceTree = "<group>"; };
 		CA03A73E1B66B0D20019B2D4 /* ytjeopardy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ytjeopardy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA03A7421B66B0D20019B2D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA03A7431B66B0D20019B2D4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -114,6 +117,8 @@
 			children = (
 				CA03A7421B66B0D20019B2D4 /* Info.plist */,
 				CA03A7431B66B0D20019B2D4 /* main.m */,
+				2189E18A1B6947830071BBE5 /* QuestionViewController.h */,
+				2189E18B1B6947830071BBE5 /* QuestionViewController.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -237,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2189E18C1B6947830071BBE5 /* QuestionViewController.m in Sources */,
 				CA03A7791B67F4300019B2D4 /* Team.m in Sources */,
 				CA03A74A1B66B0D20019B2D4 /* ViewController.m in Sources */,
 				CA03A7761B67F36B0019B2D4 /* Question.m in Sources */,
@@ -454,6 +460,7 @@
 				CA03A7631B66B0D20019B2D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CA03A7641B66B0D20019B2D4 /* Build configuration list for PBXNativeTarget "ytjeopardyTests" */ = {
 			isa = XCConfigurationList;
@@ -462,6 +469,7 @@
 				CA03A7661B66B0D20019B2D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
