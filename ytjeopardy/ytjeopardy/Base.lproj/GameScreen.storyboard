@@ -1,7 +1,769 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Zgk-NG-gdW">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Game Screen View Controller-->
+        <scene sceneID="Fbo-OI-DEL">
+            <objects>
+                <viewController id="Zgk-NG-gdW" customClass="GameScreenViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B7e-xp-Gxv"/>
+                        <viewControllerLayoutGuide type="bottom" id="qWc-y3-gqF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ILX-u6-3v1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gameBoard.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZvW-lB-AKF">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="480" id="1rK-Gw-HSy"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="480" id="ON3-40-E6e"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="650" id="Yd2-8Q-bQb"/>
+                                    <constraint firstAttribute="width" constant="616" id="jte-wt-tRH"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="1rK-Gw-HSy"/>
+                                        <exclude reference="ON3-40-E6e"/>
+                                        <exclude reference="Yd2-8Q-bQb"/>
+                                        <exclude reference="jte-wt-tRH"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="1rK-Gw-HSy"/>
+                                        <include reference="ON3-40-E6e"/>
+                                        <exclude reference="Yd2-8Q-bQb"/>
+                                        <include reference="jte-wt-tRH"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RsG-AB-Jl2">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$200" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0x-7W-I6K">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team 3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y77-YH-RBe">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$200" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dR1-eo-jLX">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4h-uk-l4Q">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$200" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gP-UG-xt8">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CodeJeopardy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEE-MD-Owd">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="o" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FgH-DU-EVh">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Idc-Bg-plx" customClass="JeopordyButton">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="$500">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="questionValue">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="categoryValue">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="Zgk-NG-gdW" eventType="touchUpInside" id="0S3-a3-FMs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GEF-8w-q3f" customClass="JeopordyButton">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="$500">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="questionValue">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="categoryValue">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="Zgk-NG-gdW" eventType="touchUpInside" id="MxJ-Rm-SAC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4pc-Zk-TKy" customClass="JeopordyButton">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="$500">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="questionValue">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="categoryValue">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="Zgk-NG-gdW" eventType="touchUpInside" id="ChY-hA-vty"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JED-UG-axQ" customClass="JeopordyButton">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="$400">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="questionValue">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="categoryValue">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="Zgk-NG-gdW" eventType="touchUpInside" id="jjs-9E-9dI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPn-up-BT3" customClass="JeopordyButton">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="$400">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="questionValue">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="categoryValue">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="Zgk-NG-gdW" eventType="touchUpInside" id="8Nh-B5-9O5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oOG-Sy-6In" customClass="JeopordyButton">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="$400">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="questionValue">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="categoryValue">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="Zgk-NG-gdW" eventType="touchUpInside" id="GYW-Gd-QAQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXy-yb-lRw" customClass="JeopordyButton">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="$300">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="questionValue">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="categoryValue">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="Zgk-NG-gdW" eventType="touchUpInside" id="lLA-Wc-qn0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4t3-GE-Kuu" customClass="JeopordyButton">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="$300">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="questionValue">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="categoryValue">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="Zgk-NG-gdW" eventType="touchUpInside" id="SdU-vv-Qgg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q3X-0J-D2R" customClass="JeopordyButton">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="$300">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="questionValue">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="categoryValue">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="Zgk-NG-gdW" eventType="touchUpInside" id="aAf-W5-aSf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xue-1H-0sq" customClass="JeopordyButton">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="$200">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="questionValue">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="categoryValue">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="Zgk-NG-gdW" eventType="touchUpInside" id="a5l-ez-n1c"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lh0-T8-8Gl" customClass="JeopordyButton">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="$200">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="questionValue">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="categoryValue">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="Zgk-NG-gdW" eventType="touchUpInside" id="Ken-C9-Ba1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sit-0U-7d9" customClass="JeopordyButton">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="$100">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="questionValue">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="categoryValue">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="Zgk-NG-gdW" eventType="touchUpInside" id="53J-ge-i1a"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kf4-q9-TSq" customClass="JeopordyButton">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="$100">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="questionValue">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="categoryValue">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="410" y="253" width="34" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="Zgk-NG-gdW" eventType="touchUpInside" id="ISN-K2-TZr"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Debug" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KkE-0x-Xjl">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Syntax" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zb-ER-ZPb">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write-it" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7HP-Bl-slL">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zjD-vK-7nw">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zb-Ui-bmD" customClass="JeopordyButton">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="$100">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="questionValue">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="categoryValue">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="Zgk-NG-gdW" eventType="touchUpInside" id="VD7-Uu-kzd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k5t-RG-2TS" customClass="JeopordyButton">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="$200">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="questionValue">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="categoryValue">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="Zgk-NG-gdW" eventType="touchUpInside" id="rXy-JI-lqY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pge-EW-v8f" customClass="JeopordyButton">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="$300">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="questionValue">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="categoryValue">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="248" y="412" width="38" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="Zgk-NG-gdW" eventType="touchUpInside" id="ayE-3W-7LA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bd1-Kp-K8k" customClass="JeopordyButton">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="$400">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="questionValue">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="categoryValue">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="Zgk-NG-gdW" eventType="touchUpInside" id="DPA-sE-0Ch"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJ1-f4-zBj" customClass="JeopordyButton">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="$100">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="questionValue">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="categoryValue">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="Zgk-NG-gdW" eventType="touchUpInside" id="elb-3b-VqT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZO3-mz-Q99" customClass="JeopordyButton">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="$200">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="questionValue">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="categoryValue">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="Zgk-NG-gdW" eventType="touchUpInside" id="SMu-Iy-nz9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qXT-aT-rv8" customClass="JeopordyButton">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="$500">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="questionValue">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="categoryValue">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="Zgk-NG-gdW" eventType="touchUpInside" id="rxy-el-LmC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.038880040033501317" green="0.052668321216378544" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="ZvW-lB-AKF" secondAttribute="centerX" id="03u-WH-KnE"/>
+                            <constraint firstItem="zjD-vK-7nw" firstAttribute="leading" secondItem="7HP-Bl-slL" secondAttribute="trailing" constant="99" id="4DG-iD-2cO"/>
+                            <constraint firstItem="GEF-8w-q3f" firstAttribute="leading" secondItem="4pc-Zk-TKy" secondAttribute="trailing" constant="119" id="4SW-cT-vEC"/>
+                            <constraint firstItem="fPn-up-BT3" firstAttribute="top" secondItem="4t3-GE-Kuu" secondAttribute="bottom" constant="46" id="4Vm-Sv-dQo"/>
+                            <constraint firstItem="oOG-Sy-6In" firstAttribute="leading" secondItem="Bd1-Kp-K8k" secondAttribute="trailing" constant="122" id="4ka-Sh-NB6"/>
+                            <constraint firstItem="Lh0-T8-8Gl" firstAttribute="leading" secondItem="ZO3-mz-Q99" secondAttribute="trailing" constant="118" id="522-pf-HtY"/>
+                            <constraint firstItem="7HP-Bl-slL" firstAttribute="leading" secondItem="4zb-ER-ZPb" secondAttribute="trailing" constant="96" id="5Eu-fa-rSL"/>
+                            <constraint firstItem="ZO3-mz-Q99" firstAttribute="top" secondItem="Kf4-q9-TSq" secondAttribute="bottom" constant="50" id="89c-3K-J8V"/>
+                            <constraint firstItem="JED-UG-axQ" firstAttribute="leading" secondItem="fPn-up-BT3" secondAttribute="trailing" constant="120" id="9T8-fB-GGd"/>
+                            <constraint firstItem="Idc-Bg-plx" firstAttribute="top" secondItem="JED-UG-axQ" secondAttribute="bottom" constant="54" id="9fI-e1-3i3"/>
+                            <constraint firstItem="dR1-eo-jLX" firstAttribute="top" secondItem="y77-YH-RBe" secondAttribute="bottom" constant="3" id="AaI-mo-12O"/>
+                            <constraint firstItem="7gP-UG-xt8" firstAttribute="leading" secondItem="ILX-u6-3v1" secondAttribute="leadingMargin" constant="149" id="BIX-cJ-FCo"/>
+                            <constraint firstAttribute="centerX" secondItem="p0x-7W-I6K" secondAttribute="centerX" id="BwA-FC-qNj"/>
+                            <constraint firstItem="4t3-GE-Kuu" firstAttribute="leading" secondItem="Q3X-0J-D2R" secondAttribute="trailing" constant="118" id="CKW-WF-Zre"/>
+                            <constraint firstItem="Q3X-0J-D2R" firstAttribute="leading" secondItem="Pge-EW-v8f" secondAttribute="trailing" constant="128" id="CUs-b5-sxF"/>
+                            <constraint firstItem="KkE-0x-Xjl" firstAttribute="leading" secondItem="ILX-u6-3v1" secondAttribute="leadingMargin" constant="236" id="Dou-qC-Z9A"/>
+                            <constraint firstItem="Q3X-0J-D2R" firstAttribute="top" secondItem="ZO3-mz-Q99" secondAttribute="bottom" constant="51" id="FqU-fX-N7S"/>
+                            <constraint firstItem="FgH-DU-EVh" firstAttribute="top" secondItem="XEE-MD-Owd" secondAttribute="bottom" constant="191.5" id="FvO-PY-iEM"/>
+                            <constraint firstItem="k5t-RG-2TS" firstAttribute="leading" secondItem="ILX-u6-3v1" secondAttribute="leadingMargin" constant="238" id="Hhk-HW-zIU"/>
+                            <constraint firstItem="0zb-Ui-bmD" firstAttribute="leading" secondItem="dJ1-f4-zBj" secondAttribute="trailing" constant="120" id="JPi-Ep-hBg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="y77-YH-RBe" secondAttribute="trailing" constant="142" id="JuZ-6F-ncx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dR1-eo-jLX" secondAttribute="trailing" constant="159" id="K0d-CC-UOU"/>
+                            <constraint firstItem="Lh0-T8-8Gl" firstAttribute="top" secondItem="dJ1-f4-zBj" secondAttribute="bottom" constant="48" id="LMj-ar-AVd"/>
+                            <constraint firstItem="R4h-uk-l4Q" firstAttribute="leading" secondItem="ILX-u6-3v1" secondAttribute="leadingMargin" constant="144" id="NBO-K5-9iX"/>
+                            <constraint firstItem="Kf4-q9-TSq" firstAttribute="leading" secondItem="Sit-0U-7d9" secondAttribute="trailing" constant="120" id="NCN-XG-KAV"/>
+                            <constraint firstAttribute="centerX" secondItem="RsG-AB-Jl2" secondAttribute="centerX" id="NUn-Vh-79g"/>
+                            <constraint firstItem="FgH-DU-EVh" firstAttribute="top" secondItem="XEE-MD-Owd" secondAttribute="bottom" constant="188" id="PW7-wC-Wca"/>
+                            <constraint firstItem="fPn-up-BT3" firstAttribute="leading" secondItem="oOG-Sy-6In" secondAttribute="trailing" constant="118" id="Phv-me-u0y"/>
+                            <constraint firstItem="Xue-1H-0sq" firstAttribute="top" secondItem="0zb-Ui-bmD" secondAttribute="bottom" constant="51" id="Q8Q-i1-VwZ"/>
+                            <constraint firstItem="Sit-0U-7d9" firstAttribute="top" secondItem="B7e-xp-Gxv" secondAttribute="bottom" constant="230" id="QfN-r5-CmF"/>
+                            <constraint firstItem="XEE-MD-Owd" firstAttribute="top" secondItem="B7e-xp-Gxv" secondAttribute="bottom" constant="20" id="RuG-bo-CrT"/>
+                            <constraint firstItem="KkE-0x-Xjl" firstAttribute="top" secondItem="B7e-xp-Gxv" secondAttribute="bottom" constant="165" id="Tbb-J3-vYT"/>
+                            <constraint firstItem="Kf4-q9-TSq" firstAttribute="top" secondItem="XEE-MD-Owd" secondAttribute="bottom" constant="172" id="Tsf-8N-bsO"/>
+                            <constraint firstItem="0zb-Ui-bmD" firstAttribute="top" secondItem="zjD-vK-7nw" secondAttribute="bottom" constant="44.5" id="U9S-3j-Uog"/>
+                            <constraint firstAttribute="centerX" secondItem="XEE-MD-Owd" secondAttribute="centerX" id="UCI-oV-Omc"/>
+                            <constraint firstItem="JED-UG-axQ" firstAttribute="top" secondItem="HXy-yb-lRw" secondAttribute="bottom" constant="46" id="Us0-dF-VCx"/>
+                            <constraint firstItem="k5t-RG-2TS" firstAttribute="top" secondItem="Sit-0U-7d9" secondAttribute="bottom" constant="51" id="V0b-B0-ET8"/>
+                            <constraint firstItem="zjD-vK-7nw" firstAttribute="top" secondItem="B7e-xp-Gxv" secondAttribute="bottom" constant="165" id="VVY-5P-44O"/>
+                            <constraint firstItem="GEF-8w-q3f" firstAttribute="top" secondItem="fPn-up-BT3" secondAttribute="bottom" constant="54" id="XqD-tP-Qjb"/>
+                            <constraint firstItem="HXy-yb-lRw" firstAttribute="leading" secondItem="4t3-GE-Kuu" secondAttribute="trailing" constant="120" id="ZdY-IS-EJl"/>
+                            <constraint firstAttribute="centerY" secondItem="ZvW-lB-AKF" secondAttribute="centerY" id="btL-R5-ef9"/>
+                            <constraint firstItem="4pc-Zk-TKy" firstAttribute="top" secondItem="oOG-Sy-6In" secondAttribute="bottom" constant="54" id="cYl-hH-dds"/>
+                            <constraint firstItem="4pc-Zk-TKy" firstAttribute="leading" secondItem="qXT-aT-rv8" secondAttribute="trailing" constant="124" id="d9L-jF-rCQ"/>
+                            <constraint firstItem="qWc-y3-gqF" firstAttribute="top" secondItem="7gP-UG-xt8" secondAttribute="bottom" constant="29" id="e6t-WQ-XDo"/>
+                            <constraint firstItem="4zb-ER-ZPb" firstAttribute="leading" secondItem="KkE-0x-Xjl" secondAttribute="trailing" constant="100" id="eHu-6R-hHQ"/>
+                            <constraint firstItem="qWc-y3-gqF" firstAttribute="top" secondItem="dR1-eo-jLX" secondAttribute="bottom" constant="29" id="ely-Dz-k7e"/>
+                            <constraint firstItem="4t3-GE-Kuu" firstAttribute="top" secondItem="Lh0-T8-8Gl" secondAttribute="bottom" constant="51" id="f08-LX-PEK"/>
+                            <constraint firstItem="Xue-1H-0sq" firstAttribute="leading" secondItem="Lh0-T8-8Gl" secondAttribute="trailing" constant="120" id="fgF-bC-gyh"/>
+                            <constraint firstItem="Idc-Bg-plx" firstAttribute="leading" secondItem="GEF-8w-q3f" secondAttribute="trailing" constant="119" id="htg-G5-5Ny"/>
+                            <constraint firstItem="dJ1-f4-zBj" firstAttribute="leading" secondItem="Kf4-q9-TSq" secondAttribute="trailing" constant="118" id="iSg-jA-QQj"/>
+                            <constraint firstItem="dJ1-f4-zBj" firstAttribute="top" secondItem="7HP-Bl-slL" secondAttribute="bottom" constant="48" id="jCe-Mm-TQB"/>
+                            <constraint firstItem="ZO3-mz-Q99" firstAttribute="leading" secondItem="k5t-RG-2TS" secondAttribute="trailing" constant="122" id="jcb-7h-o7r"/>
+                            <constraint firstItem="Pge-EW-v8f" firstAttribute="top" secondItem="k5t-RG-2TS" secondAttribute="bottom" constant="51" id="kLg-v8-mK0"/>
+                            <constraint firstItem="HXy-yb-lRw" firstAttribute="top" secondItem="Xue-1H-0sq" secondAttribute="bottom" constant="51" id="ltC-kc-Lsb"/>
+                            <constraint firstItem="Bd1-Kp-K8k" firstAttribute="top" secondItem="Pge-EW-v8f" secondAttribute="bottom" constant="46" id="mLe-2b-5NV"/>
+                            <constraint firstItem="Sit-0U-7d9" firstAttribute="leading" secondItem="ILX-u6-3v1" secondAttribute="leadingMargin" constant="240" id="nQ2-JT-E0J"/>
+                            <constraint firstAttribute="centerX" secondItem="FgH-DU-EVh" secondAttribute="centerX" id="ocI-n5-Kxk"/>
+                            <constraint firstItem="7HP-Bl-slL" firstAttribute="top" secondItem="B7e-xp-Gxv" secondAttribute="bottom" constant="165" id="qcf-iT-XFD"/>
+                            <constraint firstItem="qWc-y3-gqF" firstAttribute="top" secondItem="p0x-7W-I6K" secondAttribute="bottom" constant="29" id="qvb-sD-CjS"/>
+                            <constraint firstItem="4zb-ER-ZPb" firstAttribute="top" secondItem="XEE-MD-Owd" secondAttribute="bottom" constant="105" id="rrU-BY-LV3"/>
+                            <constraint firstItem="oOG-Sy-6In" firstAttribute="top" secondItem="Q3X-0J-D2R" secondAttribute="bottom" constant="46" id="rvI-pq-c0v"/>
+                            <constraint firstItem="7gP-UG-xt8" firstAttribute="top" secondItem="R4h-uk-l4Q" secondAttribute="bottom" constant="3" id="s09-dG-Rvw"/>
+                            <constraint firstItem="Bd1-Kp-K8k" firstAttribute="leading" secondItem="ILX-u6-3v1" secondAttribute="leadingMargin" constant="238" id="uVI-7K-se6"/>
+                            <constraint firstItem="qXT-aT-rv8" firstAttribute="leading" secondItem="ILX-u6-3v1" secondAttribute="leadingMargin" constant="236" id="uuy-H7-AFn"/>
+                            <constraint firstItem="qXT-aT-rv8" firstAttribute="top" secondItem="Bd1-Kp-K8k" secondAttribute="bottom" constant="54" id="x60-Ap-hkC"/>
+                            <constraint firstItem="qWc-y3-gqF" firstAttribute="top" secondItem="RsG-AB-Jl2" secondAttribute="bottom" constant="53" id="ytM-A2-zmC"/>
+                            <constraint firstItem="Pge-EW-v8f" firstAttribute="leading" secondItem="ILX-u6-3v1" secondAttribute="leadingMargin" constant="232" id="zF2-CI-clf"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="ZvW-lB-AKF"/>
+                                <exclude reference="RsG-AB-Jl2"/>
+                                <exclude reference="p0x-7W-I6K"/>
+                                <exclude reference="y77-YH-RBe"/>
+                                <exclude reference="dR1-eo-jLX"/>
+                                <exclude reference="R4h-uk-l4Q"/>
+                                <exclude reference="7gP-UG-xt8"/>
+                                <exclude reference="XEE-MD-Owd"/>
+                                <exclude reference="FgH-DU-EVh"/>
+                                <exclude reference="Idc-Bg-plx"/>
+                                <exclude reference="GEF-8w-q3f"/>
+                                <exclude reference="4pc-Zk-TKy"/>
+                                <exclude reference="JED-UG-axQ"/>
+                                <exclude reference="fPn-up-BT3"/>
+                                <exclude reference="oOG-Sy-6In"/>
+                                <exclude reference="HXy-yb-lRw"/>
+                                <exclude reference="4t3-GE-Kuu"/>
+                                <exclude reference="Q3X-0J-D2R"/>
+                                <exclude reference="Xue-1H-0sq"/>
+                                <exclude reference="Lh0-T8-8Gl"/>
+                                <exclude reference="Sit-0U-7d9"/>
+                                <exclude reference="Kf4-q9-TSq"/>
+                                <exclude reference="KkE-0x-Xjl"/>
+                                <exclude reference="4zb-ER-ZPb"/>
+                                <exclude reference="7HP-Bl-slL"/>
+                                <exclude reference="zjD-vK-7nw"/>
+                                <exclude reference="0zb-Ui-bmD"/>
+                                <exclude reference="k5t-RG-2TS"/>
+                                <exclude reference="Pge-EW-v8f"/>
+                                <exclude reference="Bd1-Kp-K8k"/>
+                                <exclude reference="dJ1-f4-zBj"/>
+                                <exclude reference="ZO3-mz-Q99"/>
+                                <exclude reference="qXT-aT-rv8"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="eHu-6R-hHQ"/>
+                                <exclude reference="rrU-BY-LV3"/>
+                                <exclude reference="5Eu-fa-rSL"/>
+                                <exclude reference="qcf-iT-XFD"/>
+                                <exclude reference="BIX-cJ-FCo"/>
+                                <exclude reference="s09-dG-Rvw"/>
+                                <exclude reference="FvO-PY-iEM"/>
+                                <exclude reference="PW7-wC-Wca"/>
+                                <exclude reference="ocI-n5-Kxk"/>
+                                <exclude reference="Dou-qC-Z9A"/>
+                                <exclude reference="Tbb-J3-vYT"/>
+                                <exclude reference="NBO-K5-9iX"/>
+                                <exclude reference="NUn-Vh-79g"/>
+                                <exclude reference="RuG-bo-CrT"/>
+                                <exclude reference="UCI-oV-Omc"/>
+                                <exclude reference="AaI-mo-12O"/>
+                                <exclude reference="K0d-CC-UOU"/>
+                                <exclude reference="BwA-FC-qNj"/>
+                                <exclude reference="e6t-WQ-XDo"/>
+                                <exclude reference="ely-Dz-k7e"/>
+                                <exclude reference="qvb-sD-CjS"/>
+                                <exclude reference="ytM-A2-zmC"/>
+                                <exclude reference="JuZ-6F-ncx"/>
+                                <exclude reference="4DG-iD-2cO"/>
+                                <exclude reference="VVY-5P-44O"/>
+                                <exclude reference="JPi-Ep-hBg"/>
+                                <exclude reference="U9S-3j-Uog"/>
+                                <exclude reference="cYl-hH-dds"/>
+                                <exclude reference="d9L-jF-rCQ"/>
+                                <exclude reference="CKW-WF-Zre"/>
+                                <exclude reference="f08-LX-PEK"/>
+                                <exclude reference="mLe-2b-5NV"/>
+                                <exclude reference="uVI-7K-se6"/>
+                                <exclude reference="4SW-cT-vEC"/>
+                                <exclude reference="XqD-tP-Qjb"/>
+                                <exclude reference="ZdY-IS-EJl"/>
+                                <exclude reference="ltC-kc-Lsb"/>
+                                <exclude reference="9fI-e1-3i3"/>
+                                <exclude reference="htg-G5-5Ny"/>
+                                <exclude reference="9T8-fB-GGd"/>
+                                <exclude reference="Us0-dF-VCx"/>
+                                <exclude reference="NCN-XG-KAV"/>
+                                <exclude reference="Tsf-8N-bsO"/>
+                                <exclude reference="522-pf-HtY"/>
+                                <exclude reference="LMj-ar-AVd"/>
+                                <exclude reference="kLg-v8-mK0"/>
+                                <exclude reference="zF2-CI-clf"/>
+                                <exclude reference="CUs-b5-sxF"/>
+                                <exclude reference="FqU-fX-N7S"/>
+                                <exclude reference="QfN-r5-CmF"/>
+                                <exclude reference="nQ2-JT-E0J"/>
+                                <exclude reference="Q8Q-i1-VwZ"/>
+                                <exclude reference="fgF-bC-gyh"/>
+                                <exclude reference="89c-3K-J8V"/>
+                                <exclude reference="jcb-7h-o7r"/>
+                                <exclude reference="iSg-jA-QQj"/>
+                                <exclude reference="jCe-Mm-TQB"/>
+                                <exclude reference="4Vm-Sv-dQo"/>
+                                <exclude reference="Phv-me-u0y"/>
+                                <exclude reference="Hhk-HW-zIU"/>
+                                <exclude reference="V0b-B0-ET8"/>
+                                <exclude reference="4ka-Sh-NB6"/>
+                                <exclude reference="rvI-pq-c0v"/>
+                                <exclude reference="uuy-H7-AFn"/>
+                                <exclude reference="x60-Ap-hkC"/>
+                                <exclude reference="03u-WH-KnE"/>
+                                <exclude reference="btL-R5-ef9"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="ZvW-lB-AKF"/>
+                                <include reference="RsG-AB-Jl2"/>
+                                <include reference="p0x-7W-I6K"/>
+                                <include reference="y77-YH-RBe"/>
+                                <include reference="dR1-eo-jLX"/>
+                                <include reference="R4h-uk-l4Q"/>
+                                <include reference="7gP-UG-xt8"/>
+                                <include reference="XEE-MD-Owd"/>
+                                <include reference="FgH-DU-EVh"/>
+                                <include reference="Idc-Bg-plx"/>
+                                <include reference="GEF-8w-q3f"/>
+                                <include reference="4pc-Zk-TKy"/>
+                                <include reference="JED-UG-axQ"/>
+                                <include reference="fPn-up-BT3"/>
+                                <include reference="oOG-Sy-6In"/>
+                                <include reference="HXy-yb-lRw"/>
+                                <include reference="4t3-GE-Kuu"/>
+                                <include reference="Q3X-0J-D2R"/>
+                                <include reference="Xue-1H-0sq"/>
+                                <include reference="Lh0-T8-8Gl"/>
+                                <include reference="Sit-0U-7d9"/>
+                                <include reference="Kf4-q9-TSq"/>
+                                <include reference="KkE-0x-Xjl"/>
+                                <include reference="4zb-ER-ZPb"/>
+                                <include reference="7HP-Bl-slL"/>
+                                <include reference="zjD-vK-7nw"/>
+                                <include reference="0zb-Ui-bmD"/>
+                                <include reference="k5t-RG-2TS"/>
+                                <include reference="Pge-EW-v8f"/>
+                                <include reference="Bd1-Kp-K8k"/>
+                                <include reference="dJ1-f4-zBj"/>
+                                <include reference="ZO3-mz-Q99"/>
+                                <include reference="qXT-aT-rv8"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="eHu-6R-hHQ"/>
+                                <include reference="rrU-BY-LV3"/>
+                                <include reference="5Eu-fa-rSL"/>
+                                <include reference="qcf-iT-XFD"/>
+                                <include reference="BIX-cJ-FCo"/>
+                                <include reference="s09-dG-Rvw"/>
+                                <exclude reference="FvO-PY-iEM"/>
+                                <include reference="PW7-wC-Wca"/>
+                                <include reference="ocI-n5-Kxk"/>
+                                <include reference="Dou-qC-Z9A"/>
+                                <include reference="Tbb-J3-vYT"/>
+                                <include reference="NBO-K5-9iX"/>
+                                <include reference="NUn-Vh-79g"/>
+                                <include reference="RuG-bo-CrT"/>
+                                <include reference="UCI-oV-Omc"/>
+                                <include reference="AaI-mo-12O"/>
+                                <include reference="K0d-CC-UOU"/>
+                                <include reference="BwA-FC-qNj"/>
+                                <include reference="e6t-WQ-XDo"/>
+                                <include reference="ely-Dz-k7e"/>
+                                <include reference="qvb-sD-CjS"/>
+                                <include reference="ytM-A2-zmC"/>
+                                <include reference="JuZ-6F-ncx"/>
+                                <include reference="4DG-iD-2cO"/>
+                                <include reference="VVY-5P-44O"/>
+                                <include reference="JPi-Ep-hBg"/>
+                                <include reference="U9S-3j-Uog"/>
+                                <include reference="cYl-hH-dds"/>
+                                <include reference="d9L-jF-rCQ"/>
+                                <include reference="CKW-WF-Zre"/>
+                                <include reference="f08-LX-PEK"/>
+                                <include reference="mLe-2b-5NV"/>
+                                <include reference="uVI-7K-se6"/>
+                                <include reference="4SW-cT-vEC"/>
+                                <include reference="XqD-tP-Qjb"/>
+                                <include reference="ZdY-IS-EJl"/>
+                                <include reference="ltC-kc-Lsb"/>
+                                <include reference="9fI-e1-3i3"/>
+                                <include reference="htg-G5-5Ny"/>
+                                <include reference="9T8-fB-GGd"/>
+                                <include reference="Us0-dF-VCx"/>
+                                <include reference="NCN-XG-KAV"/>
+                                <include reference="Tsf-8N-bsO"/>
+                                <include reference="522-pf-HtY"/>
+                                <include reference="LMj-ar-AVd"/>
+                                <include reference="kLg-v8-mK0"/>
+                                <include reference="zF2-CI-clf"/>
+                                <include reference="CUs-b5-sxF"/>
+                                <include reference="FqU-fX-N7S"/>
+                                <include reference="QfN-r5-CmF"/>
+                                <include reference="nQ2-JT-E0J"/>
+                                <include reference="Q8Q-i1-VwZ"/>
+                                <include reference="fgF-bC-gyh"/>
+                                <include reference="89c-3K-J8V"/>
+                                <include reference="jcb-7h-o7r"/>
+                                <include reference="iSg-jA-QQj"/>
+                                <include reference="jCe-Mm-TQB"/>
+                                <include reference="4Vm-Sv-dQo"/>
+                                <include reference="Phv-me-u0y"/>
+                                <include reference="Hhk-HW-zIU"/>
+                                <include reference="V0b-B0-ET8"/>
+                                <include reference="4ka-Sh-NB6"/>
+                                <include reference="rvI-pq-c0v"/>
+                                <include reference="uuy-H7-AFn"/>
+                                <include reference="x60-Ap-hkC"/>
+                                <include reference="03u-WH-KnE"/>
+                                <include reference="btL-R5-ef9"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VAI-AV-mGY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="284.25" y="461.25"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gameBoard.png" width="1280" height="1104"/>
+    </resources>
 </document>

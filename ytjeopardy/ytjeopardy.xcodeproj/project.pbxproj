@@ -11,7 +11,6 @@
 		82812F5C1B6942E7007B7C0F /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82812F5B1B6942E7007B7C0F /* StartViewController.m */; };
 		CA03A7441B66B0D20019B2D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA03A7431B66B0D20019B2D4 /* main.m */; };
 		CA03A7471B66B0D20019B2D4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA03A7461B66B0D20019B2D4 /* AppDelegate.m */; };
-		CA03A74A1B66B0D20019B2D4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA03A7491B66B0D20019B2D4 /* ViewController.m */; };
 		CA03A74F1B66B0D20019B2D4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA03A74E1B66B0D20019B2D4 /* Images.xcassets */; };
 		CA03A7521B66B0D20019B2D4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA03A7501B66B0D20019B2D4 /* LaunchScreen.xib */; };
 		CA03A75E1B66B0D20019B2D4 /* ytjeopardyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA03A75D1B66B0D20019B2D4 /* ytjeopardyTests.m */; };
@@ -20,6 +19,9 @@
 		CA03A76F1B66B1B00019B2D4 /* Question.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA03A76D1B66B1B00019B2D4 /* Question.storyboard */; };
 		CA03A7761B67F36B0019B2D4 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = CA03A7751B67F36B0019B2D4 /* Question.m */; };
 		CA03A7791B67F4300019B2D4 /* Team.m in Sources */ = {isa = PBXBuildFile; fileRef = CA03A7781B67F4300019B2D4 /* Team.m */; };
+		D416B57D1B6947D900C176AD /* GameScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D416B57C1B6947D900C176AD /* GameScreenViewController.m */; };
+		D4E4ABEC1B6885F10078106D /* gameBoard.png in Resources */ = {isa = PBXBuildFile; fileRef = D4E4ABEB1B6885F10078106D /* gameBoard.png */; };
+		D4E4ABEF1B6887000078106D /* JeopordyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D4E4ABEE1B6887000078106D /* JeopordyButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +44,6 @@
 		CA03A7431B66B0D20019B2D4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CA03A7451B66B0D20019B2D4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CA03A7461B66B0D20019B2D4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CA03A7481B66B0D20019B2D4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CA03A7491B66B0D20019B2D4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CA03A74E1B66B0D20019B2D4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CA03A7511B66B0D20019B2D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		CA03A7571B66B0D20019B2D4 /* ytjeopardyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ytjeopardyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +56,11 @@
 		CA03A7751B67F36B0019B2D4 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
 		CA03A7771B67F4300019B2D4 /* Team.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Team.h; sourceTree = "<group>"; };
 		CA03A7781B67F4300019B2D4 /* Team.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Team.m; sourceTree = "<group>"; };
+		D416B57B1B6947D900C176AD /* GameScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScreenViewController.h; sourceTree = "<group>"; };
+		D416B57C1B6947D900C176AD /* GameScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScreenViewController.m; sourceTree = "<group>"; };
+		D4E4ABEB1B6885F10078106D /* gameBoard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gameBoard.png; sourceTree = "<group>"; };
+		D4E4ABED1B6887000078106D /* JeopordyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JeopordyButton.h; sourceTree = "<group>"; };
+		D4E4ABEE1B6887000078106D /* JeopordyButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JeopordyButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +104,6 @@
 			children = (
 				CA03A7451B66B0D20019B2D4 /* AppDelegate.h */,
 				CA03A7461B66B0D20019B2D4 /* AppDelegate.m */,
-				CA03A7481B66B0D20019B2D4 /* ViewController.h */,
-				CA03A7491B66B0D20019B2D4 /* ViewController.m */,
 				CA03A74E1B66B0D20019B2D4 /* Images.xcassets */,
 				CA03A7501B66B0D20019B2D4 /* LaunchScreen.xib */,
 				CA03A7411B66B0D20019B2D4 /* Supporting Files */,
@@ -108,11 +111,15 @@
 				82812F5A1B6942E7007B7C0F /* StartViewController.h */,
 				82812F5B1B6942E7007B7C0F /* StartViewController.m */,
 				CA03A76A1B66B17C0019B2D4 /* GameScreen.storyboard */,
+				D4E4ABED1B6887000078106D /* JeopordyButton.h */,
+				D4E4ABEE1B6887000078106D /* JeopordyButton.m */,
 				CA03A76D1B66B1B00019B2D4 /* Question.storyboard */,
 				CA03A7741B67F36B0019B2D4 /* Question.h */,
 				CA03A7751B67F36B0019B2D4 /* Question.m */,
 				CA03A7771B67F4300019B2D4 /* Team.h */,
 				CA03A7781B67F4300019B2D4 /* Team.m */,
+				D416B57B1B6947D900C176AD /* GameScreenViewController.h */,
+				D416B57C1B6947D900C176AD /* GameScreenViewController.m */,
 			);
 			path = ytjeopardy;
 			sourceTree = "<group>";
@@ -120,6 +127,7 @@
 		CA03A7411B66B0D20019B2D4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D4E4ABEB1B6885F10078106D /* gameBoard.png */,
 				CA03A7421B66B0D20019B2D4 /* Info.plist */,
 				CA03A7431B66B0D20019B2D4 /* main.m */,
 				2189E18A1B6947830071BBE5 /* QuestionViewController.h */,
@@ -227,6 +235,7 @@
 			files = (
 				CA03A7521B66B0D20019B2D4 /* LaunchScreen.xib in Resources */,
 				CA03A76F1B66B1B00019B2D4 /* Question.storyboard in Resources */,
+				D4E4ABEC1B6885F10078106D /* gameBoard.png in Resources */,
 				CA03A76C1B66B17C0019B2D4 /* GameScreen.storyboard in Resources */,
 				CA03A74F1B66B0D20019B2D4 /* Images.xcassets in Resources */,
 				CA03A7691B66B1610019B2D4 /* SetupStoryboard.storyboard in Resources */,
@@ -249,11 +258,12 @@
 			files = (
 				2189E18C1B6947830071BBE5 /* QuestionViewController.m in Sources */,
 				CA03A7791B67F4300019B2D4 /* Team.m in Sources */,
-				CA03A74A1B66B0D20019B2D4 /* ViewController.m in Sources */,
 				CA03A7761B67F36B0019B2D4 /* Question.m in Sources */,
 				82812F5C1B6942E7007B7C0F /* StartViewController.m in Sources */,
 				CA03A7471B66B0D20019B2D4 /* AppDelegate.m in Sources */,
 				CA03A7441B66B0D20019B2D4 /* main.m in Sources */,
+				D416B57D1B6947D900C176AD /* GameScreenViewController.m in Sources */,
+				D4E4ABEF1B6887000078106D /* JeopordyButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
