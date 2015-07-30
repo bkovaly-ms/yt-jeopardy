@@ -24,6 +24,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.nameCounter =0;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,22 +37,29 @@
     // This replaces the first team
     // self.team1.text = @"";
     // self.team1.text = self.teamName.text;
-    static int i ;
-    if (i == 0) {
+    
+    
+    if (self.nameCounter == 0) {
 
-        self.team1.text = @"";
+        //self.team1.text = @"";
         self.team1.text = self.teamName.text;
-        i++;
+        self.teamName.text=@"";
+
+        (self.nameCounter)++;
     }
-    else if (i == 1) {
-        self.team2.text = @"";
+    else if (self.nameCounter == 1) {
+        //self.team2.text = @"";
         self.team2.text = self.teamName.text;
-        i++;
+        self.nameCounter++;
+        self.teamName.text=@"";
+
     }
-    else if (i == 2) {
-        self.team3.text = @"";
+    else if (self.nameCounter == 2) {
+       // self.team3.text = @"";
         self.team3.text = self.teamName.text;
-        i++;
+        self.nameCounter++;
+        self.teamName.text=@"";
+
     }
     // else {
         // disable add button
@@ -69,5 +78,22 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)startTapped:(id)sender {
+    if (self.nameCounter >= 3) {
+//        UIViewController *destination = [[UIStoryboard storyboardWithName:@"GameScreen" bundle:nil] instantiateInitialViewController];
+//        [self presentViewController:destination animated:NO completion:nil];
+        
+        
+        UIAlertView *complete = [[UIAlertView alloc] initWithTitle:@"Great" message:@"Let's do this" delegate:self cancelButtonTitle:@"OK!" otherButtonTitles:nil];
+        [complete show];
+        //Will delete "complete" after segue is connected
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Sorry" message:@"you can't do that" delegate:self cancelButtonTitle:@"Close" otherButtonTitles:nil];
+        [alert show];
+    }
+    
+    // Disable the transition if counter is less then 3, or conversely only enable if it's above 3
+}
 
 @end
