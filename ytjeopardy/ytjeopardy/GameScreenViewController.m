@@ -24,7 +24,7 @@
     
     UIViewController *destination = [[UIStoryboard storyboardWithName:@"Question" bundle:nil] instantiateInitialViewController]; //Transition to other VC
     
-    [self presentViewController:destination animated:YES completion:nil];
+    [self.navigationController pushViewController:destination animated:YES];
     
     NSArray *questions = @[ @[ @"A", @"B", @"C",@"D" ], // 2D array that holds the questions
                             @[ @"F",@"G", @"H",@"I" ],

@@ -31,7 +31,7 @@
     // Do any additional setup after loading the view.
     
     //string displays category for jeopardy
-    self.category.text =self.question.category;
+   // self.category.text =self.question.category;
     
     //this string displays how many points to go hand in hand with the category string on the top of the screen
     self.pointValueLabel.text = [NSString stringWithFormat:@"%ld", self.question.pointValue];

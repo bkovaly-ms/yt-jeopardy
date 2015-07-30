@@ -81,13 +81,11 @@
 
 - (IBAction)startTapped:(id)sender {
     if (self.nameCounter >= 3) {
-//        UIViewController *destination = [[UIStoryboard storyboardWithName:@"GameScreen" bundle:nil] instantiateInitialViewController];
-//        [self presentViewController:destination animated:NO completion:nil];
+        UIViewController *destination = [[UIStoryboard storyboardWithName:@"GameScreen" bundle:nil] instantiateInitialViewController];
+        [self.navigationController pushViewController:destination animated:YES];
         
         
-        UIAlertView *complete = [[UIAlertView alloc] initWithTitle:@"Great" message:@"Let's do this" delegate:self cancelButtonTitle:@"OK!" otherButtonTitles:nil];
-        [complete show];
-        //Will delete "complete" after segue is connected
+    
     } else {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Sorry" message:@"you can't do that" delegate:self cancelButtonTitle:@"Close" otherButtonTitles:nil];
         [alert show];

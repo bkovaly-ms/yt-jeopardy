@@ -318,9 +318,6 @@
                                         <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                    <rect key="frame" x="410" y="253" width="34" height="30"/>
-                                </variation>
                                 <connections>
                                     <action selector="buttonTapped:" destination="Zgk-NG-gdW" eventType="touchUpInside" id="ISN-K2-TZr"/>
                                 </connections>
@@ -396,9 +393,6 @@
                                         <integer key="value" value="0"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                    <rect key="frame" x="248" y="412" width="38" height="30"/>
-                                </variation>
                                 <connections>
                                     <action selector="buttonTapped:" destination="Zgk-NG-gdW" eventType="touchUpInside" id="ayE-3W-7LA"/>
                                 </connections>
