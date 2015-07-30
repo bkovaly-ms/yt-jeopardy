@@ -9,6 +9,8 @@
 
 @interface Question : NSObject
 
+@property NSObject* questionAsked;
+
 @property NSInteger pointValue;
 
 @property NSString *text;
@@ -18,5 +20,9 @@
 @property BOOL selected;
 
 @property BOOL answeredCorrectly;
+
+@property NSString *category;
+
+@property NSString *teamName;
 
 @end

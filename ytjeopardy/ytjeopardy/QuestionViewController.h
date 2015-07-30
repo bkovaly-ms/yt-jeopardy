@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Question.h"
 
 @interface QuestionViewController : UIViewController
+
+@property Question *question;
 
 @end
