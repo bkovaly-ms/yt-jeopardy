@@ -19,4 +19,6 @@
 
 @property BOOL answeredCorrectly;
 
+@property NSString *category;
+
 @end

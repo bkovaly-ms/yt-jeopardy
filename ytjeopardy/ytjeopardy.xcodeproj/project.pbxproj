@@ -19,6 +19,8 @@
 		CA03A76F1B66B1B00019B2D4 /* Question.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA03A76D1B66B1B00019B2D4 /* Question.storyboard */; };
 		CA03A7761B67F36B0019B2D4 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = CA03A7751B67F36B0019B2D4 /* Question.m */; };
 		CA03A7791B67F4300019B2D4 /* Team.m in Sources */ = {isa = PBXBuildFile; fileRef = CA03A7781B67F4300019B2D4 /* Team.m */; };
+		CA03A7841B6A9A2D0019B2D4 /* QuestionData.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA03A7831B6A9A2D0019B2D4 /* QuestionData.plist */; };
+		CA03A7871B6AC27F0019B2D4 /* QuestionRetriever.m in Sources */ = {isa = PBXBuildFile; fileRef = CA03A7861B6AC27F0019B2D4 /* QuestionRetriever.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,9 @@
 		CA03A7751B67F36B0019B2D4 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
 		CA03A7771B67F4300019B2D4 /* Team.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Team.h; sourceTree = "<group>"; };
 		CA03A7781B67F4300019B2D4 /* Team.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Team.m; sourceTree = "<group>"; };
+		CA03A7831B6A9A2D0019B2D4 /* QuestionData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = QuestionData.plist; sourceTree = "<group>"; };
+		CA03A7851B6AC27F0019B2D4 /* QuestionRetriever.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionRetriever.h; sourceTree = "<group>"; };
+		CA03A7861B6AC27F0019B2D4 /* QuestionRetriever.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionRetriever.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +113,8 @@
 				CA03A7751B67F36B0019B2D4 /* Question.m */,
 				CA03A7771B67F4300019B2D4 /* Team.h */,
 				CA03A7781B67F4300019B2D4 /* Team.m */,
+				CA03A7851B6AC27F0019B2D4 /* QuestionRetriever.h */,
+				CA03A7861B6AC27F0019B2D4 /* QuestionRetriever.m */,
 			);
 			path = ytjeopardy;
 			sourceTree = "<group>";
@@ -119,6 +126,7 @@
 				CA03A7431B66B0D20019B2D4 /* main.m */,
 				2189E18A1B6947830071BBE5 /* QuestionViewController.h */,
 				2189E18B1B6947830071BBE5 /* QuestionViewController.m */,
+				CA03A7831B6A9A2D0019B2D4 /* QuestionData.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -222,6 +230,7 @@
 			files = (
 				CA03A7521B66B0D20019B2D4 /* LaunchScreen.xib in Resources */,
 				CA03A76F1B66B1B00019B2D4 /* Question.storyboard in Resources */,
+				CA03A7841B6A9A2D0019B2D4 /* QuestionData.plist in Resources */,
 				CA03A76C1B66B17C0019B2D4 /* GameScreen.storyboard in Resources */,
 				CA03A74F1B66B0D20019B2D4 /* Images.xcassets in Resources */,
 				CA03A7691B66B1610019B2D4 /* SetupStoryboard.storyboard in Resources */,
@@ -247,6 +256,7 @@
 				CA03A74A1B66B0D20019B2D4 /* ViewController.m in Sources */,
 				CA03A7761B67F36B0019B2D4 /* Question.m in Sources */,
 				CA03A7471B66B0D20019B2D4 /* AppDelegate.m in Sources */,
+				CA03A7871B6AC27F0019B2D4 /* QuestionRetriever.m in Sources */,
 				CA03A7441B66B0D20019B2D4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
