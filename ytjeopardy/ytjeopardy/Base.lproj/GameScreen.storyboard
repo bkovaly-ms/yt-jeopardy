@@ -68,12 +68,6 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4h-uk-l4Q">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$200" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gP-UG-xt8">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -383,6 +377,21 @@
                                     <action selector="buttonTapped:" destination="Zgk-NG-gdW" eventType="touchUpInside" id="DPA-sE-0Ch"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJ1-f4-zBj" customClass="JeopordyButton">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="$100">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="questionValue">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="categoryString" value="Write It"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="Zgk-NG-gdW" eventType="touchUpInside" id="elb-3b-VqT"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZO3-mz-Q99" customClass="JeopordyButton">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -431,21 +440,15 @@
                                     <action selector="buttonTapped:" destination="Zgk-NG-gdW" eventType="touchUpInside" id="Ken-C9-Ba1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJ1-f4-zBj" customClass="JeopordyButton">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="$100">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="questionValue">
-                                        <integer key="value" value="0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="categoryString" value="Write It"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="buttonTapped:" destination="Zgk-NG-gdW" eventType="touchUpInside" id="elb-3b-VqT"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4h-uk-l4Q">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="157" y="727" width="55.5" height="20.5"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.038880040033501317" green="0.052668321216378544" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -524,7 +527,6 @@
                                 <exclude reference="p0x-7W-I6K"/>
                                 <exclude reference="y77-YH-RBe"/>
                                 <exclude reference="dR1-eo-jLX"/>
-                                <exclude reference="R4h-uk-l4Q"/>
                                 <exclude reference="7gP-UG-xt8"/>
                                 <exclude reference="XEE-MD-Owd"/>
                                 <exclude reference="FgH-DU-EVh"/>
@@ -548,10 +550,11 @@
                                 <exclude reference="k5t-RG-2TS"/>
                                 <exclude reference="Pge-EW-v8f"/>
                                 <exclude reference="Bd1-Kp-K8k"/>
+                                <exclude reference="dJ1-f4-zBj"/>
                                 <exclude reference="ZO3-mz-Q99"/>
                                 <exclude reference="qXT-aT-rv8"/>
                                 <exclude reference="Lh0-T8-8Gl"/>
-                                <exclude reference="dJ1-f4-zBj"/>
+                                <exclude reference="R4h-uk-l4Q"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="eHu-6R-hHQ"/>
@@ -630,7 +633,6 @@
                                 <include reference="p0x-7W-I6K"/>
                                 <include reference="y77-YH-RBe"/>
                                 <include reference="dR1-eo-jLX"/>
-                                <include reference="R4h-uk-l4Q"/>
                                 <include reference="7gP-UG-xt8"/>
                                 <include reference="XEE-MD-Owd"/>
                                 <include reference="FgH-DU-EVh"/>
@@ -654,10 +656,11 @@
                                 <include reference="k5t-RG-2TS"/>
                                 <include reference="Pge-EW-v8f"/>
                                 <include reference="Bd1-Kp-K8k"/>
+                                <include reference="dJ1-f4-zBj"/>
                                 <include reference="ZO3-mz-Q99"/>
                                 <include reference="qXT-aT-rv8"/>
                                 <include reference="Lh0-T8-8Gl"/>
-                                <include reference="dJ1-f4-zBj"/>
+                                <include reference="R4h-uk-l4Q"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="eHu-6R-hHQ"/>
@@ -730,6 +733,14 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="teamOneLabel" destination="R4h-uk-l4Q" id="pfA-mz-mbQ"/>
+                        <outlet property="teamOneScoreLabel" destination="7gP-UG-xt8" id="ifv-Wj-XFp"/>
+                        <outlet property="teamThreeLabel" destination="y77-YH-RBe" id="Zmb-uq-Xz2"/>
+                        <outlet property="teamThreeScoreLabel" destination="dR1-eo-jLX" id="o1r-31-cYp"/>
+                        <outlet property="teamTwoLabel" destination="RsG-AB-Jl2" id="Ivc-Pt-edT"/>
+                        <outlet property="teamTwoScoreLabel" destination="p0x-7W-I6K" id="yix-X7-Jz2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VAI-AV-mGY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

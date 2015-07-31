@@ -13,7 +13,13 @@
 #import "JeopardyManager.h"
 @interface GameScreenViewController ()
 
-@property NSArray *questions;
+@property (weak, nonatomic) IBOutlet UILabel *teamOneLabel;
+@property (weak, nonatomic) IBOutlet UILabel *teamTwoLabel;
+@property (weak, nonatomic) IBOutlet UILabel *teamThreeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *teamOneScoreLabel;
+@property (weak, nonatomic) IBOutlet UILabel *teamTwoScoreLabel;
+@property (weak, nonatomic) IBOutlet UILabel *teamThreeScoreLabel;
+
 
 @end
 
@@ -47,7 +53,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
 }
+-(void) viewWillAppear:(BOOL)animated
+{
+    JeopardyManager *jm = [JeopardyManager sharedInstance];
+    self.teamOneLabel.text = jm.team1.name;
+    self.teamTwoLabel.text = jm.team2.name;
+    self.teamThreeLabel.text = jm.team3.name;
+    
+    self.teamOneScoreLabel.text = [NSString stringWithFormat:@"%ld",jm.team1.score] ;
+    self.teamTwoScoreLabel.text = [NSString stringWithFormat:@"%ld",jm.team2.score] ;
+    self.teamThreeScoreLabel.text = [NSString stringWithFormat:@"%ld",jm.team3.score] ;
+
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
