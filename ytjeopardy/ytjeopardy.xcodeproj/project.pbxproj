@@ -122,6 +122,8 @@
 				CA03A7411B66B0D20019B2D4 /* Supporting Files */,
 				CA03A7671B66B1610019B2D4 /* SetupStoryboard.storyboard */,
 				82812F5A1B6942E7007B7C0F /* StartViewController.h */,
+				2189E18A1B6947830071BBE5 /* QuestionViewController.h */,
+				2189E18B1B6947830071BBE5 /* QuestionViewController.m */,
 				82812F5B1B6942E7007B7C0F /* StartViewController.m */,
 				CA03A76A1B66B17C0019B2D4 /* GameScreen.storyboard */,
 				D4E4ABED1B6887000078106D /* JeopordyButton.h */,
@@ -150,8 +152,6 @@
 				D4E4ABEB1B6885F10078106D /* gameBoard.png */,
 				CA03A7421B66B0D20019B2D4 /* Info.plist */,
 				CA03A7431B66B0D20019B2D4 /* main.m */,
-				2189E18A1B6947830071BBE5 /* QuestionViewController.h */,
-				2189E18B1B6947830071BBE5 /* QuestionViewController.m */,
 				CA03A7831B6A9A2D0019B2D4 /* QuestionData.plist */,
 			);
 			name = "Supporting Files";

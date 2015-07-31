@@ -8,7 +8,9 @@
 
 #import "GameScreenViewController.h"
 #import "JeopordyButton.h"
-
+#import "QuestionRetriever.h"
+#import "QuestionViewController.h"
+#import "JeopardyManager.h"
 @interface GameScreenViewController ()
 
 @property NSArray *questions;
@@ -20,24 +22,24 @@
 
 - (IBAction)buttonTapped:(JeopordyButton *)sender {
     
-   // NSLog(@"%ld and %ld", sender.questionValue, sender.categoryValue); // printing the key paths for the questions
+
+    JeopardyManager *jm = [JeopardyManager sharedInstance];
     
-    UIViewController *destination = [[UIStoryboard storyboardWithName:@"Question" bundle:nil] instantiateInitialViewController]; //Transition to other VC
+    Question *question = [jm startQuestionForCategory:sender.categoryString index:sender.questionValue];
+    
+    NSLog(@"question: %@ for %ld", question.category, question.pointValue );
+    
+    
+    
+    QuestionViewController *destination = [[UIStoryboard storyboardWithName:@"Question" bundle:nil] instantiateInitialViewController]; //Transition to other VC
+    
+    destination.question = question;
+
+    NSLog(@"desc: %@", destination);
     
     [self.navigationController pushViewController:destination animated:YES];
     
-    NSArray *questions = @[ @[ @"A", @"B", @"C",@"D" ], // 2D array that holds the questions
-                            @[ @"F",@"G", @"H",@"I" ],
-                            @[ @"1", @"2", @"3",@"4"],
-                            @[ @"6", @"7", @"8",@"9" ],
-                            @[ @"x", @"y", @"z",@"zz" ]
-                            ];
-    
-    
-   // NSLog(@"Q: %@", [[questions objectAtIndex:sender.questionValue] objectAtIndex:sender.categoryValue] ); // Printing out the contents of array
-   // [[strings objectAtIndex:i] objectAtIndex:j];
-    
-    
+
 }
 
 
@@ -45,10 +47,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
-
-    
-    
 }
 
 - (void)didReceiveMemoryWarning {

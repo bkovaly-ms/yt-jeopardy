@@ -15,6 +15,6 @@
 
 @property NSInteger questionValue;
 
-@property NSInteger categoryValue;
+@property NSString *categoryString;
 
 @end
