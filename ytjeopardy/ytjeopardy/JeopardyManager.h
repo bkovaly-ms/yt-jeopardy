@@ -32,6 +32,9 @@
 
 -(BOOL)checkGameOver;
 
+// Returns the teams sorted by score with the winner at index 0.
+- (NSArray *)teamsSortedByScore;
+
 #pragma mark - Singleton
 
 + (instancetype)sharedInstance;
