@@ -136,6 +136,18 @@
     return (self.countQuestionsShown >= [self.qr getNumberOfQuestions]);
 }
 
+- (NSArray *)teamsSortedByScore
+{
+    NSArray *sortedArray;
+    sortedArray = [self.teams sortedArrayUsingComparator:^NSComparisonResult(Team *team1, Team *team2)
+           {
+               NSInteger score1 = team1.score;
+               NSInteger score2 = team2.score;
+               return score1 < score2;
+           }];
+    return sortedArray;
+}
+
 #pragma mark - helpers
 
 -(Team *)createTeamWithName:(NSString *)name

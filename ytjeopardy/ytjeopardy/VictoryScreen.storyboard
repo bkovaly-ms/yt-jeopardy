@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GHi-xo-Sjp">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Victory Screen View Controller-->
@@ -15,8 +16,69 @@
                     <view key="view" contentMode="scaleToFill" id="xQJ-xt-4se">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations!!!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lst-Em-ANw">
+                                <rect key="frame" x="177" y="52" width="245" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You scored 10 points" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBB-yT-q8k">
+                                <rect key="frame" x="190" y="197" width="221" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You beat Team 2 by 10 points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UzO-OO-IaX">
+                                <rect key="frame" x="16" y="376" width="562" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You beat Team 3 by 10 points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QfQ-rl-fj3">
+                                <rect key="frame" x="16" y="439" width="568" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created by Ashton, Markos, Mimi, Munya, Robert, and Yarelly" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbK-Ce-0gY">
+                                <rect key="frame" x="16" y="535" width="568" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You rule, Team1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGR-Sx-kkX">
+                                <rect key="frame" x="217" y="140" width="166" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="lst-Em-ANw" secondAttribute="centerX" id="1FN-vL-wd0"/>
+                            <constraint firstItem="UzO-OO-IaX" firstAttribute="top" secondItem="FBB-yT-q8k" secondAttribute="bottom" constant="150" id="1Y0-bR-LuB"/>
+                            <constraint firstAttribute="centerX" secondItem="FBB-yT-q8k" secondAttribute="centerX" id="6Qg-Sc-ar0"/>
+                            <constraint firstAttribute="centerX" secondItem="IGR-Sx-kkX" secondAttribute="centerX" id="EX0-Cd-0aO"/>
+                            <constraint firstItem="QfQ-rl-fj3" firstAttribute="top" secondItem="UzO-OO-IaX" secondAttribute="bottom" constant="34" id="IXo-NY-8Fw"/>
+                            <constraint firstItem="QfQ-rl-fj3" firstAttribute="leading" secondItem="xQJ-xt-4se" secondAttribute="leadingMargin" id="JzA-CX-Hff"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UzO-OO-IaX" secondAttribute="trailing" constant="6" id="KFg-jn-A11"/>
+                            <constraint firstItem="4Gk-fs-0Y3" firstAttribute="top" secondItem="bbK-Ce-0gY" secondAttribute="bottom" constant="44" id="LY1-eT-7BG"/>
+                            <constraint firstItem="QfQ-rl-fj3" firstAttribute="trailing" secondItem="xQJ-xt-4se" secondAttribute="trailingMargin" id="PJS-NM-Vyo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bbK-Ce-0gY" secondAttribute="trailing" id="VjT-5r-6O1"/>
+                            <constraint firstItem="FBB-yT-q8k" firstAttribute="top" secondItem="IGR-Sx-kkX" secondAttribute="bottom" constant="28" id="YPQ-gG-Rt1"/>
+                            <constraint firstItem="bbK-Ce-0gY" firstAttribute="leading" secondItem="xQJ-xt-4se" secondAttribute="leadingMargin" id="bTX-jZ-K31"/>
+                            <constraint firstItem="lst-Em-ANw" firstAttribute="top" secondItem="gpF-or-5fk" secondAttribute="bottom" constant="32" id="qRe-Xa-I9w"/>
+                            <constraint firstItem="IGR-Sx-kkX" firstAttribute="top" secondItem="lst-Em-ANw" secondAttribute="bottom" constant="50" id="wMd-UI-Xaq"/>
+                            <constraint firstItem="UzO-OO-IaX" firstAttribute="leading" secondItem="xQJ-xt-4se" secondAttribute="leadingMargin" id="wN7-xE-y1W"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lastTeamLabel" destination="QfQ-rl-fj3" id="sVf-wb-uic"/>
+                        <outlet property="runnerUpLabel" destination="UzO-OO-IaX" id="N9q-L9-U9F"/>
+                        <outlet property="winnerLabel" destination="IGR-Sx-kkX" id="WNx-Jk-xgF"/>
+                        <outlet property="winningScoreLabel" destination="FBB-yT-q8k" id="pxb-Ey-vJG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PSb-9s-PoC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
