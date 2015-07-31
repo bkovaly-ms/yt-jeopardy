@@ -39,11 +39,7 @@
     self.wrongAnswerButton.layer.cornerRadius = 10;
     
     //string displays category for jeopardy
-<<<<<<< Updated upstream
    // self.category.text =self.question.category;
-=======
-    self.category.text =[NSString stringWithFormat:@"Debug%@",self.question.category ];
->>>>>>> Stashed changes
     
     //this string displays how many points to go hand in hand with the category string on the top of the screen
     self.pointValueLabel.text = [NSString stringWithFormat:@"100 Points%ld", self.question.pointValue];
