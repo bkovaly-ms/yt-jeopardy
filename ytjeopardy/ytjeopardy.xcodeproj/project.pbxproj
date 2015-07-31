@@ -11,6 +11,8 @@
 		82812F5C1B6942E7007B7C0F /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82812F5B1B6942E7007B7C0F /* StartViewController.m */; };
 		A936C36A1B6B578B00FBE099 /* JeopardyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A936C3691B6B578B00FBE099 /* JeopardyManager.m */; };
 		A936C36C1B6B6ED300FBE099 /* JeopardyManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A936C36B1B6B6ED300FBE099 /* JeopardyManagerTests.m */; };
+		A936C3721B6BBAE400FBE099 /* VictoryScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A936C3711B6BBAE400FBE099 /* VictoryScreen.storyboard */; };
+		A936C3751B6BBB7600FBE099 /* VictoryScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A936C3741B6BBB7600FBE099 /* VictoryScreenViewController.m */; };
 		CA03A7441B66B0D20019B2D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA03A7431B66B0D20019B2D4 /* main.m */; };
 		CA03A7471B66B0D20019B2D4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA03A7461B66B0D20019B2D4 /* AppDelegate.m */; };
 		CA03A74F1B66B0D20019B2D4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA03A74E1B66B0D20019B2D4 /* Images.xcassets */; };
@@ -45,6 +47,9 @@
 		A936C3681B6B578B00FBE099 /* JeopardyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JeopardyManager.h; sourceTree = "<group>"; };
 		A936C3691B6B578B00FBE099 /* JeopardyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JeopardyManager.m; sourceTree = "<group>"; };
 		A936C36B1B6B6ED300FBE099 /* JeopardyManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JeopardyManagerTests.m; sourceTree = "<group>"; };
+		A936C3711B6BBAE400FBE099 /* VictoryScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VictoryScreen.storyboard; sourceTree = "<group>"; };
+		A936C3731B6BBB7600FBE099 /* VictoryScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VictoryScreenViewController.h; sourceTree = "<group>"; };
+		A936C3741B6BBB7600FBE099 /* VictoryScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VictoryScreenViewController.m; sourceTree = "<group>"; };
 		CA03A73E1B66B0D20019B2D4 /* ytjeopardy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ytjeopardy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA03A7421B66B0D20019B2D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA03A7431B66B0D20019B2D4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -132,6 +137,9 @@
 				CA03A7861B6AC27F0019B2D4 /* QuestionRetriever.m */,
 				A936C3681B6B578B00FBE099 /* JeopardyManager.h */,
 				A936C3691B6B578B00FBE099 /* JeopardyManager.m */,
+				A936C3711B6BBAE400FBE099 /* VictoryScreen.storyboard */,
+				A936C3731B6BBB7600FBE099 /* VictoryScreenViewController.h */,
+				A936C3741B6BBB7600FBE099 /* VictoryScreenViewController.m */,
 			);
 			path = ytjeopardy;
 			sourceTree = "<group>";
@@ -253,6 +261,7 @@
 				CA03A76C1B66B17C0019B2D4 /* GameScreen.storyboard in Resources */,
 				CA03A74F1B66B0D20019B2D4 /* Images.xcassets in Resources */,
 				CA03A7691B66B1610019B2D4 /* SetupStoryboard.storyboard in Resources */,
+				A936C3721B6BBAE400FBE099 /* VictoryScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +285,7 @@
 				A936C36A1B6B578B00FBE099 /* JeopardyManager.m in Sources */,
 				82812F5C1B6942E7007B7C0F /* StartViewController.m in Sources */,
 				CA03A7471B66B0D20019B2D4 /* AppDelegate.m in Sources */,
+				A936C3751B6BBB7600FBE099 /* VictoryScreenViewController.m in Sources */,
 				CA03A7871B6AC27F0019B2D4 /* QuestionRetriever.m in Sources */,
 				CA03A7441B66B0D20019B2D4 /* main.m in Sources */,
 				D416B57D1B6947D900C176AD /* GameScreenViewController.m in Sources */,
