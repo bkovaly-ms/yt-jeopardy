@@ -8,6 +8,16 @@
 #import <Foundation/Foundation.h>
 #import "Question.h"
 
+/**
+ 
+ Instructions for use:
+ 
+ QuestionRetriever *qr = [[QuestionRetriever alloc] initWithQuestionFileName:@"QuestionData"];
+ Question *question = [qr questionForCategory:@"Syntax" index:0];
+ 
+ Remember to import this file :)
+ 
+ */
 @interface QuestionRetriever : NSObject
 
 // The sample file I've included is called "QuestionData".
