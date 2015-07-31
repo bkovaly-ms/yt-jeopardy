@@ -39,33 +39,39 @@
     // self.team1.text = @"";
     // self.team1.text = self.teamName.text;
     
-    if (self.nameCounter == 0) {
-        
-        //self.team1.text = @"";
-        self.team1.text = self.teamName.text;
-        self.teamName.text=@"";
-        
-        (self.nameCounter)++;
-    }
-    else if (self.nameCounter == 1) {
-        //self.team2.text = @"";
-        self.team2.text = self.teamName.text;
-        self.nameCounter++;
-        self.teamName.text=@"";
-        
-    }
-    else if (self.nameCounter == 2) {
-        // self.team3.text = @"";
-        self.team3.text = self.teamName.text;
-        self.nameCounter++;
-        self.teamName.text=@"";}
-    
-    else{
-        UIAlertView *naw = [[UIAlertView alloc] initWithTitle:@"Woah..." message:@"who do you know here?" delegate:self cancelButtonTitle:@"leave" otherButtonTitles:nil];
-        [naw show];
-    
-    }
+    if ([self.teamName.text  isEqual:@""]) {
+        UIAlertView *dont = [[UIAlertView alloc] initWithTitle:@"Woah..." message:@"who do you know here?" delegate:self cancelButtonTitle:@"leave" otherButtonTitles:nil];
+        [dont show];
+    } else {
+        if (self.nameCounter == 0) {
+            self.team1.text = self.teamName.text;
+            self.teamName.text=@"";
+            (self.nameCounter)++;
         }
+        
+        
+        else if (self.nameCounter == 1) {
+            //self.team2.text = @"";
+            self.team2.text = self.teamName.text;
+            self.nameCounter++;
+            self.teamName.text=@"";
+            
+        }
+        
+        else if (self.nameCounter == 2) {
+            // self.team3.text = @"";
+            self.team3.text = self.teamName.text;
+            self.nameCounter++;
+            self.teamName.text=@"";}
+        
+        else{
+            UIAlertView *naw = [[UIAlertView alloc] initWithTitle:@"Woah..." message:@"who do you know here?" delegate:self cancelButtonTitle:@"leave" otherButtonTitles:nil];
+            [naw show];
+        }
+
+    }
+}
+    
     // else {
         // disable add button
         
