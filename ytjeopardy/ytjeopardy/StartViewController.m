@@ -7,6 +7,7 @@
 //
 
 #import "StartViewController.h"
+#import "JeopardyManager.h"
 
 @interface StartViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *team1;
@@ -38,13 +39,12 @@
     // self.team1.text = @"";
     // self.team1.text = self.teamName.text;
     
-    
     if (self.nameCounter == 0) {
-
+        
         //self.team1.text = @"";
         self.team1.text = self.teamName.text;
         self.teamName.text=@"";
-
+        
         (self.nameCounter)++;
     }
     else if (self.nameCounter == 1) {
@@ -52,22 +52,27 @@
         self.team2.text = self.teamName.text;
         self.nameCounter++;
         self.teamName.text=@"";
-
+        
     }
     else if (self.nameCounter == 2) {
-       // self.team3.text = @"";
+        // self.team3.text = @"";
         self.team3.text = self.teamName.text;
         self.nameCounter++;
-        self.teamName.text=@"";
-
+        self.teamName.text=@"";}
+    
+    else{
+        UIAlertView *naw = [[UIAlertView alloc] initWithTitle:@"Woah..." message:@"who do you know here?" delegate:self cancelButtonTitle:@"leave" otherButtonTitles:nil];
+        [naw show];
+    
     }
+        }
     // else {
         // disable add button
         
    // }
 
-    
-}
+
+
 
 /*
 #pragma mark - Navigation
@@ -81,6 +86,23 @@
 
 - (IBAction)startTapped:(id)sender {
     if (self.nameCounter >= 3) {
+        JeopardyManager *jm = [JeopardyManager sharedInstance];
+        [jm startGameWithTeam1:@"team1" team2:@"team2" team3:@"team3" questionFileName:@"QuestionData"];
+        
+        // Capture team1's name
+        NSString *name1 = self.team1.text;
+        
+        // Capture team2's name
+        NSString *name2 = self.team2.text;
+        
+        // Capture team3's name
+        NSString *name3 = self.team3.text;
+
+        
+        // Start the game
+        [jm startGameWithTeam1:name1 team2:name2 team3:name3 questionFileName: @"QuestionData"];
+        
+        
         UIViewController *destination = [[UIStoryboard storyboardWithName:@"GameScreen" bundle:nil] instantiateInitialViewController];
         [self.navigationController pushViewController:destination animated:YES];
         

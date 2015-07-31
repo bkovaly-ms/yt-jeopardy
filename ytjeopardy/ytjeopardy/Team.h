@@ -13,4 +13,8 @@
 
 @property NSString *name;
 
+@property BOOL canChooseQuestion;
+
+@property BOOL canAnswer;
+
 @end

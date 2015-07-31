@@ -14,6 +14,7 @@
 @interface QuestionRetriever ()
 
 @property NSDictionary *questions;
+@property int numberOfQuestions;
 
 @end
 
@@ -32,6 +33,7 @@
     if (self = [super init])
     {
         self.questions = plistQuestions;
+        self.numberOfQuestions = [self calculateNumberOfQuestions];
     }
     
     return self;
@@ -69,6 +71,25 @@
     {
         return nil;
     }
+}
+
+- (int)getNumberOfQuestions
+{
+    return self.numberOfQuestions;
+}
+
+#pragma mark - helpers
+- (int) calculateNumberOfQuestions
+{
+    int count = 0;
+    
+    for (NSString *category in [self.questions allKeys])
+    {
+        NSArray *questionsInCategory = self.questions[category][@"Questions"];
+        count += questionsInCategory.count;
+    }
+    
+    return count;
 }
 
 @end

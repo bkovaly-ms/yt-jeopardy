@@ -27,4 +27,6 @@
 // Index 0 will give you the lowest point question for that category.
 - (Question*)questionForCategory:(NSString*)category index:(NSInteger)index;
 
+- (int)getNumberOfQuestions;
+
 @end
