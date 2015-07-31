@@ -30,14 +30,26 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    
+    //adds border to button to make it easier for the user to identify it as a button as opposed to a label
+    self.rightAnswerButton.backgroundColor=[UIColor whiteColor];
+    self.rightAnswerButton.layer.cornerRadius = 10;
+    
+    self.wrongAnswerButton.backgroundColor=[UIColor whiteColor];
+    self.wrongAnswerButton.layer.cornerRadius = 10;
+    
     //string displays category for jeopardy
+<<<<<<< Updated upstream
    // self.category.text =self.question.category;
+=======
+    self.category.text =[NSString stringWithFormat:@"Debug%@",self.question.category ];
+>>>>>>> Stashed changes
     
     //this string displays how many points to go hand in hand with the category string on the top of the screen
-    self.pointValueLabel.text = [NSString stringWithFormat:@"%ld", self.question.pointValue];
+    self.pointValueLabel.text = [NSString stringWithFormat:@"100 Points%ld", self.question.pointValue];
     
     //this string displays the label that identifies what team is currently nswering the question
-    self.teamName.text=self.question.teamName;
+    self.teamName.text=[NSString stringWithFormat:@"Team %@",self.question.teamName];
     
     //this label is going to show the user how much time they have left
     self.timer.text=[NSString stringWithFormat:@"Time left: %ld", self.question.time];
