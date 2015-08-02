@@ -9,12 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "Team.h"
 #import "Question.h"
+#import "QuestionRetriever.h"
 
 @interface JeopardyManager : NSObject
 
 @property Team *team1;
 @property Team *team2;
 @property Team *team3;
+@property (readonly) QuestionRetriever *qr;
 
 #pragma mark - Game Management 
 

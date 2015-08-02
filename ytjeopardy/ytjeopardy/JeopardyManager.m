@@ -24,9 +24,9 @@
 
 @interface JeopardyManager()
 
-@property QuestionRetriever *qr;
 @property NSMutableArray *teams;
 @property int countQuestionsShown;
+@property (readwrite) QuestionRetriever *qr;
 
 #pragma mark - picking question
 @property int indexOfTeamPickingQuestion;
@@ -86,14 +86,23 @@
         return nil;
     }
     
-    self.countQuestionsShown++;
-    
     // Get the question.
-    self.currentQuestion = [self.qr questionForCategory:category index:index];
-    
-    // Team that selected the question gets to answer first.
-    [self setNextAnsweringTeamAtIndex:self.indexOfTeamPickingQuestion];
-    self.countOfTeamsAttemptedAnswer = 0;
+    Question *nextQuestion = [self.qr questionForCategory:category index:index];
+    if (nextQuestion.questionAsked == YES)
+    {
+        NSLog(@"This question has already been asked.");
+        self.currentQuestion = nil;
+    }
+    else
+    {
+        nextQuestion.questionAsked = YES;
+        self.currentQuestion = nextQuestion;
+        self.countQuestionsShown++;
+        
+        // Team that selected the question gets to answer first.
+        [self setNextAnsweringTeamAtIndex:self.indexOfTeamPickingQuestion];
+        self.countOfTeamsAttemptedAnswer = 0;
+    }
     
     return self.currentQuestion;
 }
@@ -111,6 +120,8 @@
         // Good job team! You earn some points.
         Team *team = [self.teams objectAtIndex:self.indexOfTeamAnswering];
         team.score += self.currentQuestion.pointValue;
+        self.currentQuestion.answeredCorrectly = YES;
+        self.currentQuestion.teamName = team.name;
         
         // And the next team gets to answer.
         [self advanceToNextPickingTeam];
