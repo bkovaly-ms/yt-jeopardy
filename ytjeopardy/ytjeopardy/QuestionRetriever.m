@@ -15,6 +15,8 @@
 
 @property NSDictionary *questions;
 @property int numberOfQuestions;
+@property NSMutableArray *categories;
+@property NSMutableDictionary *allQuestions;
 
 @end
 
@@ -33,7 +35,7 @@
     if (self = [super init])
     {
         self.questions = plistQuestions;
-        self.numberOfQuestions = [self calculateNumberOfQuestions];
+        [self loadAllQuestions];
     }
     
     return self;
@@ -47,30 +49,16 @@
         return nil;
     }
     
-    NSArray *questionsInCategory = self.questions[category][@"Questions"];
+    NSArray *questionsInCategory = self.allQuestions[category];
     
-    if (!questionsInCategory)
+    if (!questionsInCategory || questionsInCategory.count == 0)
     {
         NSLog(@"No questions exist for the category: %@", category);
         return nil;
     }
     
     // should probably check array bounds, but i'll let you YTs figure out why the app crashes if you don't pass proper bounds ;)
-    NSDictionary *questionDict = questionsInCategory[index];
-    
-    if (questionDict)
-    {
-        Question *question = [Question new];
-        question.category = category;
-        question.text = questionDict[QUESTION_TEXT];
-        question.time = [questionDict[QUESTION_TIME] integerValue];
-        question.pointValue = [questionDict[QUESTION_POINTVALUE] integerValue];
-        return question;
-    }
-    else
-    {
-        return nil;
-    }
+    return questionsInCategory[index];
 }
 
 - (int)getNumberOfQuestions
@@ -79,17 +67,44 @@
 }
 
 #pragma mark - helpers
-- (int) calculateNumberOfQuestions
+- (void) loadAllQuestions
 {
-    int count = 0;
+    NSArray *allKeys = [self.questions allKeys];
+    self.categories = [NSMutableArray new];
+    self.allQuestions = [NSMutableDictionary new];
     
-    for (NSString *category in [self.questions allKeys])
+    for (NSString *category in allKeys)
     {
-        NSArray *questionsInCategory = self.questions[category][@"Questions"];
-        count += questionsInCategory.count;
+        // Add to category list
+        [self.categories addObject:category];
+        
+        // Add questions in this category to allQuestions.
+        NSArray *questions = [self loadQuestionsIncategory:category];
+        [self.allQuestions setValue:questions forKey:category];
+        
+        self.numberOfQuestions += (int)questions.count;
+    }
+}
+
+- (NSArray *) loadQuestionsIncategory:(NSString *)category
+{
+    NSMutableArray *questionInCategory = [NSMutableArray new];
+    
+    NSArray *questionsInDict = self.questions[category][@"Questions"];
+    for (NSDictionary *questionDict in questionsInDict)
+    {
+        if (questionDict)
+        {
+            Question *question = [Question new];
+            question.category = category;
+            question.text = questionDict[QUESTION_TEXT];
+            question.time = [questionDict[QUESTION_TIME] integerValue];
+            question.pointValue = [questionDict[QUESTION_POINTVALUE] integerValue];
+            [questionInCategory addObject:question];
+        }
     }
     
-    return count;
+    return questionInCategory;
 }
 
 @end
