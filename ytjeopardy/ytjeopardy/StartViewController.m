@@ -24,9 +24,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.nameCounter = 0;
     
-    self.nameCounter =0;
+    self.navigationController.navigationBar.shadowImage = [[UIImage alloc]init];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
+                       forBarPosition:UIBarPositionAny
+                           barMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.translucent = NO;
+    
+    [self.addTeam setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
+    [self.startButton setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
+    self.startButton.enabled = NO;
+    self.team1.textColor = [UIColor grayColor];
+    self.team2.textColor = [UIColor grayColor];
+    self.team3.textColor = [UIColor grayColor];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,49 +46,40 @@
 }
 
 - (IBAction)saveTeamName:(id)sender {
-    // This replaces the first team
-    // self.team1.text = @"";
-    // self.team1.text = self.teamName.text;
+    NSString *teamName = self.teamName.text;
+    teamName = [teamName stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceAndNewlineCharacterSet]];
     
-    if ([self.teamName.text  isEqual:@""]) {
+    if ([teamName  isEqual:@""]) {
+        self.teamName.text=@"";
         UIAlertView *dont = [[UIAlertView alloc] initWithTitle:@"Woah..." message:@"who do you know here?" delegate:self cancelButtonTitle:@"leave" otherButtonTitles:nil];
         [dont show];
     } else {
         if (self.nameCounter == 0) {
-            self.team1.text = self.teamName.text;
-            self.teamName.text=@"";
-            (self.nameCounter)++;
+            self.team1.text = teamName;
+            self.team1.textColor = [UIColor whiteColor];
         }
-        
-        
         else if (self.nameCounter == 1) {
-            //self.team2.text = @"";
-            self.team2.text = self.teamName.text;
-            self.nameCounter++;
-            self.teamName.text=@"";
-            
+            self.team2.text = teamName;
+            self.team2.textColor = [UIColor whiteColor];
         }
-        
         else if (self.nameCounter == 2) {
-            // self.team3.text = @"";
-            self.team3.text = self.teamName.text;
-            self.nameCounter++;
-            self.teamName.text=@"";}
-        
-        else{
-            UIAlertView *naw = [[UIAlertView alloc] initWithTitle:@"Woah..." message:@"who do you know here?" delegate:self cancelButtonTitle:@"leave" otherButtonTitles:nil];
-            [naw show];
+            self.team3.text = teamName;
+            [self disableAddingNewTeams];
+            self.team3.textColor = [UIColor whiteColor];
         }
-
+        
+        self.teamName.text=@"";
+        (self.nameCounter)++;
     }
 }
-    
-    // else {
-        // disable add button
-        
-   // }
 
-
+- (void)disableAddingNewTeams
+{
+    self.addTeam.enabled = NO;
+    self.teamName.enabled = NO;
+    self.teamName.backgroundColor = [UIColor lightGrayColor];
+    self.startButton.enabled = YES;
+}
 
 
 /*
@@ -91,35 +93,22 @@
 */
 
 - (IBAction)startTapped:(id)sender {
-    if (self.nameCounter >= 3) {
-        JeopardyManager *jm = [JeopardyManager sharedInstance];
-        [jm startGameWithTeam1:@"team1" team2:@"team2" team3:@"team3" questionFileName:@"QuestionData"];
-        
-        // Capture team1's name
-        NSString *name1 = self.team1.text;
-        
-        // Capture team2's name
-        NSString *name2 = self.team2.text;
-        
-        // Capture team3's name
-        NSString *name3 = self.team3.text;
-
-        
-        // Start the game
-        [jm startGameWithTeam1:name1 team2:name2 team3:name3 questionFileName: @"QuestionData"];
-        
-        
-        UIViewController *destination = [[UIStoryboard storyboardWithName:@"GameScreen" bundle:nil] instantiateInitialViewController];
-        [self.navigationController pushViewController:destination animated:YES];
-        
-        
+    JeopardyManager *jm = [JeopardyManager sharedInstance];
+    [jm startGameWithTeam1:@"team1" team2:@"team2" team3:@"team3" questionFileName:@"QuestionData"];
     
-    } else {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Sorry" message:@"you can't do that" delegate:self cancelButtonTitle:@"Close" otherButtonTitles:nil];
-        [alert show];
-    }
+    // Capture team1's name
+    NSString *name1 = self.team1.text;
     
-    // Disable the transition if counter is less then 3, or conversely only enable if it's above 3
+    // Capture team2's name
+    NSString *name2 = self.team2.text;
+    
+    // Capture team3's name
+    NSString *name3 = self.team3.text;
+    
+    // Start the game
+    [jm startGameWithTeam1:name1 team2:name2 team3:name3 questionFileName: @"QuestionData"];
+    UIViewController *destination = [[UIStoryboard storyboardWithName:@"GameScreen" bundle:nil] instantiateInitialViewController];
+    [self.navigationController pushViewController:destination animated:YES];
 }
 
 @end
