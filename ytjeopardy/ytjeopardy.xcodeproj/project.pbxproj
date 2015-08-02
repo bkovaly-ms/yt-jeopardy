@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		2189E18C1B6947830071BBE5 /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2189E18B1B6947830071BBE5 /* QuestionViewController.m */; };
 		82812F5C1B6942E7007B7C0F /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82812F5B1B6942E7007B7C0F /* StartViewController.m */; };
+		A92611321B6DEF2B00A38606 /* JeopardyBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A92611311B6DEF2B00A38606 /* JeopardyBoard.storyboard */; };
+		A92611381B6DF20800A38606 /* QuestionsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A92611371B6DF20800A38606 /* QuestionsCollectionViewController.m */; };
+		A926113B1B6DF95C00A38606 /* QuestionsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A926113A1B6DF95C00A38606 /* QuestionsCollectionViewCell.m */; };
+		A926113E1B6E873300A38606 /* JeopardyBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A926113D1B6E873300A38606 /* JeopardyBoardViewController.m */; };
 		A936C36A1B6B578B00FBE099 /* JeopardyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A936C3691B6B578B00FBE099 /* JeopardyManager.m */; };
 		A936C36C1B6B6ED300FBE099 /* JeopardyManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A936C36B1B6B6ED300FBE099 /* JeopardyManagerTests.m */; };
 		A936C3721B6BBAE400FBE099 /* VictoryScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A936C3711B6BBAE400FBE099 /* VictoryScreen.storyboard */; };
@@ -44,6 +48,13 @@
 		2189E18B1B6947830071BBE5 /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionViewController.m; sourceTree = "<group>"; };
 		82812F5A1B6942E7007B7C0F /* StartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
 		82812F5B1B6942E7007B7C0F /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
+		A92611311B6DEF2B00A38606 /* JeopardyBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = JeopardyBoard.storyboard; sourceTree = "<group>"; };
+		A92611361B6DF20800A38606 /* QuestionsCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionsCollectionViewController.h; sourceTree = "<group>"; };
+		A92611371B6DF20800A38606 /* QuestionsCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionsCollectionViewController.m; sourceTree = "<group>"; };
+		A92611391B6DF95C00A38606 /* QuestionsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionsCollectionViewCell.h; sourceTree = "<group>"; };
+		A926113A1B6DF95C00A38606 /* QuestionsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionsCollectionViewCell.m; sourceTree = "<group>"; };
+		A926113C1B6E873300A38606 /* JeopardyBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JeopardyBoardViewController.h; sourceTree = "<group>"; };
+		A926113D1B6E873300A38606 /* JeopardyBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JeopardyBoardViewController.m; sourceTree = "<group>"; };
 		A936C3681B6B578B00FBE099 /* JeopardyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JeopardyManager.h; sourceTree = "<group>"; };
 		A936C3691B6B578B00FBE099 /* JeopardyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JeopardyManager.m; sourceTree = "<group>"; };
 		A936C36B1B6B6ED300FBE099 /* JeopardyManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JeopardyManagerTests.m; sourceTree = "<group>"; };
@@ -142,6 +153,13 @@
 				A936C3711B6BBAE400FBE099 /* VictoryScreen.storyboard */,
 				A936C3731B6BBB7600FBE099 /* VictoryScreenViewController.h */,
 				A936C3741B6BBB7600FBE099 /* VictoryScreenViewController.m */,
+				A92611311B6DEF2B00A38606 /* JeopardyBoard.storyboard */,
+				A926113C1B6E873300A38606 /* JeopardyBoardViewController.h */,
+				A926113D1B6E873300A38606 /* JeopardyBoardViewController.m */,
+				A92611361B6DF20800A38606 /* QuestionsCollectionViewController.h */,
+				A92611371B6DF20800A38606 /* QuestionsCollectionViewController.m */,
+				A92611391B6DF95C00A38606 /* QuestionsCollectionViewCell.h */,
+				A926113A1B6DF95C00A38606 /* QuestionsCollectionViewCell.m */,
 			);
 			path = ytjeopardy;
 			sourceTree = "<group>";
@@ -255,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA03A7521B66B0D20019B2D4 /* LaunchScreen.xib in Resources */,
+				A92611321B6DEF2B00A38606 /* JeopardyBoard.storyboard in Resources */,
 				CA03A76F1B66B1B00019B2D4 /* Question.storyboard in Resources */,
 				D4E4ABEC1B6885F10078106D /* gameBoard.png in Resources */,
 				CA03A7841B6A9A2D0019B2D4 /* QuestionData.plist in Resources */,
@@ -287,9 +306,12 @@
 				CA03A7471B66B0D20019B2D4 /* AppDelegate.m in Sources */,
 				A936C3751B6BBB7600FBE099 /* VictoryScreenViewController.m in Sources */,
 				CA03A7871B6AC27F0019B2D4 /* QuestionRetriever.m in Sources */,
+				A92611381B6DF20800A38606 /* QuestionsCollectionViewController.m in Sources */,
 				CA03A7441B66B0D20019B2D4 /* main.m in Sources */,
 				D416B57D1B6947D900C176AD /* GameScreenViewController.m in Sources */,
+				A926113B1B6DF95C00A38606 /* QuestionsCollectionViewCell.m in Sources */,
 				D4E4ABEF1B6887000078106D /* JeopordyButton.m in Sources */,
+				A926113E1B6E873300A38606 /* JeopardyBoardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

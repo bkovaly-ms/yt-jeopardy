@@ -9,7 +9,7 @@
 
 @interface Question : NSObject
 
-@property NSObject* questionAsked;
+@property BOOL questionAsked;
 
 @property NSInteger pointValue;
 
