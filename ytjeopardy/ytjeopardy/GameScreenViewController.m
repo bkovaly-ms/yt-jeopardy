@@ -62,9 +62,19 @@
     self.teamTwoLabel.text = jm.team2.name;
     self.teamThreeLabel.text = jm.team3.name;
     
-    self.teamOneScoreLabel.text = [NSString stringWithFormat:@"%ld",jm.team1.score] ;
-    self.teamTwoScoreLabel.text = [NSString stringWithFormat:@"%ld",jm.team2.score] ;
-    self.teamThreeScoreLabel.text = [NSString stringWithFormat:@"%ld",jm.team3.score] ;
+    self.teamOneScoreLabel.text = [NSString stringWithFormat:@"%ld",jm.team1.score];
+    self.teamTwoScoreLabel.text = [NSString stringWithFormat:@"%ld",jm.team2.score];
+    self.teamThreeScoreLabel.text = [NSString stringWithFormat:@"%ld",jm.team3.score];
+    
+    if ([jm checkGameOver]) {
+        
+        UIViewController *vs =[[UIStoryboard storyboardWithName:@"VictoryScreen" bundle:nil] instantiateInitialViewController];
+        [self.navigationController pushViewController:vs animated:YES];
+
+    }
+        
+        
+         
 
 }
 
