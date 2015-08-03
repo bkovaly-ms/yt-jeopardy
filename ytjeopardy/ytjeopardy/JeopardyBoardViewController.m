@@ -39,6 +39,14 @@
     self.team1ScoreLabel.text = [NSString stringWithFormat:@"%ld", self.jm.team1.score];
     self.team2ScoreLabel.text = [NSString stringWithFormat:@"%ld", self.jm.team2.score];
     self.team3ScoreLabel.text = [NSString stringWithFormat:@"%ld", self.jm.team3.score];
+    
+    self.team1NameLabel.textColor = self.jm.team1.canChooseQuestion ? [UIColor yellowColor] : [UIColor grayColor];
+    self.team2NameLabel.textColor = self.jm.team2.canChooseQuestion ? [UIColor yellowColor] : [UIColor grayColor];
+    self.team3NameLabel.textColor = self.jm.team3.canChooseQuestion ? [UIColor yellowColor] : [UIColor grayColor];
+    
+    self.team1ScoreLabel.textColor = self.jm.team1.canChooseQuestion ? [UIColor yellowColor] : [UIColor grayColor];
+    self.team2ScoreLabel.textColor = self.jm.team2.canChooseQuestion ? [UIColor yellowColor] : [UIColor grayColor];
+    self.team3ScoreLabel.textColor = self.jm.team3.canChooseQuestion ? [UIColor yellowColor] : [UIColor grayColor];
 }
 
 - (void)didReceiveMemoryWarning {

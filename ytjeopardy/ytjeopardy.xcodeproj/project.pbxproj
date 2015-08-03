@@ -13,14 +13,17 @@
 		A92611381B6DF20800A38606 /* QuestionsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A92611371B6DF20800A38606 /* QuestionsCollectionViewController.m */; };
 		A926113B1B6DF95C00A38606 /* QuestionsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A926113A1B6DF95C00A38606 /* QuestionsCollectionViewCell.m */; };
 		A926113E1B6E873300A38606 /* JeopardyBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A926113D1B6E873300A38606 /* JeopardyBoardViewController.m */; };
+		A92611461B6EDBB000A38606 /* AnsweringScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A92611451B6EDBB000A38606 /* AnsweringScreen.storyboard */; };
+		A92611491B6EDBD900A38606 /* AnsweringScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A92611481B6EDBD900A38606 /* AnsweringScreenViewController.m */; };
 		A936C36A1B6B578B00FBE099 /* JeopardyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A936C3691B6B578B00FBE099 /* JeopardyManager.m */; };
 		A936C36C1B6B6ED300FBE099 /* JeopardyManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A936C36B1B6B6ED300FBE099 /* JeopardyManagerTests.m */; };
 		A936C3721B6BBAE400FBE099 /* VictoryScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A936C3711B6BBAE400FBE099 /* VictoryScreen.storyboard */; };
 		A936C3751B6BBB7600FBE099 /* VictoryScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A936C3741B6BBB7600FBE099 /* VictoryScreenViewController.m */; };
+		A938675B1B6F3974007D9AF9 /* gyparody.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A938675A1B6F3974007D9AF9 /* gyparody.ttf */; };
+		A938675F1B6F3DD0007D9AF9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A938675D1B6F3DD0007D9AF9 /* LaunchScreen.xib */; };
 		CA03A7441B66B0D20019B2D4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA03A7431B66B0D20019B2D4 /* main.m */; };
 		CA03A7471B66B0D20019B2D4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA03A7461B66B0D20019B2D4 /* AppDelegate.m */; };
 		CA03A74F1B66B0D20019B2D4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA03A74E1B66B0D20019B2D4 /* Images.xcassets */; };
-		CA03A7521B66B0D20019B2D4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA03A7501B66B0D20019B2D4 /* LaunchScreen.xib */; };
 		CA03A7691B66B1610019B2D4 /* SetupStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA03A7671B66B1610019B2D4 /* SetupStoryboard.storyboard */; };
 		CA03A76C1B66B17C0019B2D4 /* GameScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA03A76A1B66B17C0019B2D4 /* GameScreen.storyboard */; };
 		CA03A76F1B66B1B00019B2D4 /* Question.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA03A76D1B66B1B00019B2D4 /* Question.storyboard */; };
@@ -55,19 +58,23 @@
 		A926113A1B6DF95C00A38606 /* QuestionsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionsCollectionViewCell.m; sourceTree = "<group>"; };
 		A926113C1B6E873300A38606 /* JeopardyBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JeopardyBoardViewController.h; sourceTree = "<group>"; };
 		A926113D1B6E873300A38606 /* JeopardyBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JeopardyBoardViewController.m; sourceTree = "<group>"; };
+		A92611451B6EDBB000A38606 /* AnsweringScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AnsweringScreen.storyboard; sourceTree = "<group>"; };
+		A92611471B6EDBD900A38606 /* AnsweringScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnsweringScreenViewController.h; sourceTree = "<group>"; };
+		A92611481B6EDBD900A38606 /* AnsweringScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnsweringScreenViewController.m; sourceTree = "<group>"; };
 		A936C3681B6B578B00FBE099 /* JeopardyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JeopardyManager.h; sourceTree = "<group>"; };
 		A936C3691B6B578B00FBE099 /* JeopardyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JeopardyManager.m; sourceTree = "<group>"; };
 		A936C36B1B6B6ED300FBE099 /* JeopardyManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JeopardyManagerTests.m; sourceTree = "<group>"; };
 		A936C3711B6BBAE400FBE099 /* VictoryScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VictoryScreen.storyboard; sourceTree = "<group>"; };
 		A936C3731B6BBB7600FBE099 /* VictoryScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VictoryScreenViewController.h; sourceTree = "<group>"; };
 		A936C3741B6BBB7600FBE099 /* VictoryScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VictoryScreenViewController.m; sourceTree = "<group>"; };
+		A938675A1B6F3974007D9AF9 /* gyparody.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = gyparody.ttf; sourceTree = "<group>"; };
+		A938675E1B6F3DD0007D9AF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		CA03A73E1B66B0D20019B2D4 /* ytjeopardy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ytjeopardy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA03A7421B66B0D20019B2D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA03A7431B66B0D20019B2D4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CA03A7451B66B0D20019B2D4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CA03A7461B66B0D20019B2D4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		CA03A74E1B66B0D20019B2D4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		CA03A7511B66B0D20019B2D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		CA03A7571B66B0D20019B2D4 /* ytjeopardyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ytjeopardyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA03A75C1B66B0D20019B2D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA03A7681B66B1610019B2D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SetupStoryboard.storyboard; sourceTree = "<group>"; };
@@ -105,6 +112,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A92611441B6EDB7B00A38606 /* AnsweringScreen */ = {
+			isa = PBXGroup;
+			children = (
+				A92611451B6EDBB000A38606 /* AnsweringScreen.storyboard */,
+				A92611471B6EDBD900A38606 /* AnsweringScreenViewController.h */,
+				A92611481B6EDBD900A38606 /* AnsweringScreenViewController.m */,
+			);
+			name = AnsweringScreen;
+			sourceTree = "<group>";
+		};
+		A92611521B6F035300A38606 /* JeopardyBoard */ = {
+			isa = PBXGroup;
+			children = (
+				A92611311B6DEF2B00A38606 /* JeopardyBoard.storyboard */,
+				A926113C1B6E873300A38606 /* JeopardyBoardViewController.h */,
+				A926113D1B6E873300A38606 /* JeopardyBoardViewController.m */,
+				A92611361B6DF20800A38606 /* QuestionsCollectionViewController.h */,
+				A92611371B6DF20800A38606 /* QuestionsCollectionViewController.m */,
+				A92611391B6DF95C00A38606 /* QuestionsCollectionViewCell.h */,
+				A926113A1B6DF95C00A38606 /* QuestionsCollectionViewCell.m */,
+			);
+			name = JeopardyBoard;
+			sourceTree = "<group>";
+		};
+		A92611531B6F037400A38606 /* VictoryScreen */ = {
+			isa = PBXGroup;
+			children = (
+				A936C3711B6BBAE400FBE099 /* VictoryScreen.storyboard */,
+				A936C3731B6BBB7600FBE099 /* VictoryScreenViewController.h */,
+				A936C3741B6BBB7600FBE099 /* VictoryScreenViewController.m */,
+			);
+			name = VictoryScreen;
+			sourceTree = "<group>";
+		};
 		CA03A7351B66B0D10019B2D4 = {
 			isa = PBXGroup;
 			children = (
@@ -127,10 +168,13 @@
 			isa = PBXGroup;
 			children = (
 				CA03A7451B66B0D20019B2D4 /* AppDelegate.h */,
+				A938675D1B6F3DD0007D9AF9 /* LaunchScreen.xib */,
 				CA03A7461B66B0D20019B2D4 /* AppDelegate.m */,
 				CA03A74E1B66B0D20019B2D4 /* Images.xcassets */,
-				CA03A7501B66B0D20019B2D4 /* LaunchScreen.xib */,
 				CA03A7411B66B0D20019B2D4 /* Supporting Files */,
+				A92611441B6EDB7B00A38606 /* AnsweringScreen */,
+				A92611521B6F035300A38606 /* JeopardyBoard */,
+				A92611531B6F037400A38606 /* VictoryScreen */,
 				CA03A7671B66B1610019B2D4 /* SetupStoryboard.storyboard */,
 				82812F5A1B6942E7007B7C0F /* StartViewController.h */,
 				2189E18A1B6947830071BBE5 /* QuestionViewController.h */,
@@ -150,16 +194,6 @@
 				CA03A7861B6AC27F0019B2D4 /* QuestionRetriever.m */,
 				A936C3681B6B578B00FBE099 /* JeopardyManager.h */,
 				A936C3691B6B578B00FBE099 /* JeopardyManager.m */,
-				A936C3711B6BBAE400FBE099 /* VictoryScreen.storyboard */,
-				A936C3731B6BBB7600FBE099 /* VictoryScreenViewController.h */,
-				A936C3741B6BBB7600FBE099 /* VictoryScreenViewController.m */,
-				A92611311B6DEF2B00A38606 /* JeopardyBoard.storyboard */,
-				A926113C1B6E873300A38606 /* JeopardyBoardViewController.h */,
-				A926113D1B6E873300A38606 /* JeopardyBoardViewController.m */,
-				A92611361B6DF20800A38606 /* QuestionsCollectionViewController.h */,
-				A92611371B6DF20800A38606 /* QuestionsCollectionViewController.m */,
-				A92611391B6DF95C00A38606 /* QuestionsCollectionViewCell.h */,
-				A926113A1B6DF95C00A38606 /* QuestionsCollectionViewCell.m */,
 			);
 			path = ytjeopardy;
 			sourceTree = "<group>";
@@ -167,6 +201,7 @@
 		CA03A7411B66B0D20019B2D4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A938675A1B6F3974007D9AF9 /* gyparody.ttf */,
 				D4E4ABEB1B6885F10078106D /* gameBoard.png */,
 				CA03A7421B66B0D20019B2D4 /* Info.plist */,
 				CA03A7431B66B0D20019B2D4 /* main.m */,
@@ -272,14 +307,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA03A7521B66B0D20019B2D4 /* LaunchScreen.xib in Resources */,
+				A92611461B6EDBB000A38606 /* AnsweringScreen.storyboard in Resources */,
 				A92611321B6DEF2B00A38606 /* JeopardyBoard.storyboard in Resources */,
 				CA03A76F1B66B1B00019B2D4 /* Question.storyboard in Resources */,
 				D4E4ABEC1B6885F10078106D /* gameBoard.png in Resources */,
 				CA03A7841B6A9A2D0019B2D4 /* QuestionData.plist in Resources */,
+				A938675B1B6F3974007D9AF9 /* gyparody.ttf in Resources */,
 				CA03A76C1B66B17C0019B2D4 /* GameScreen.storyboard in Resources */,
 				CA03A74F1B66B0D20019B2D4 /* Images.xcassets in Resources */,
 				CA03A7691B66B1610019B2D4 /* SetupStoryboard.storyboard in Resources */,
+				A938675F1B6F3DD0007D9AF9 /* LaunchScreen.xib in Resources */,
 				A936C3721B6BBAE400FBE099 /* VictoryScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,6 +347,7 @@
 				CA03A7441B66B0D20019B2D4 /* main.m in Sources */,
 				D416B57D1B6947D900C176AD /* GameScreenViewController.m in Sources */,
 				A926113B1B6DF95C00A38606 /* QuestionsCollectionViewCell.m in Sources */,
+				A92611491B6EDBD900A38606 /* AnsweringScreenViewController.m in Sources */,
 				D4E4ABEF1B6887000078106D /* JeopordyButton.m in Sources */,
 				A926113E1B6E873300A38606 /* JeopardyBoardViewController.m in Sources */,
 			);
@@ -334,10 +372,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CA03A7501B66B0D20019B2D4 /* LaunchScreen.xib */ = {
+		A938675D1B6F3DD0007D9AF9 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CA03A7511B66B0D20019B2D4 /* Base */,
+				A938675E1B6F3DD0007D9AF9 /* Base */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";

@@ -8,6 +8,7 @@
 
 #import "StartViewController.h"
 #import "JeopardyManager.h"
+#import "JeopardyBoardViewController.h"
 
 @interface StartViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *team1;
@@ -35,9 +36,9 @@
     [self.addTeam setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
     [self.startButton setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
     self.startButton.enabled = NO;
-    self.team1.textColor = [UIColor grayColor];
-    self.team2.textColor = [UIColor grayColor];
-    self.team3.textColor = [UIColor grayColor];
+    self.team1.textColor = [UIColor clearColor];
+    self.team2.textColor = [UIColor clearColor];
+    self.team3.textColor = [UIColor clearColor];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -107,8 +108,10 @@
     
     // Start the game
     [jm startGameWithTeam1:name1 team2:name2 team3:name3 questionFileName: @"QuestionData"];
-    UIViewController *destination = [[UIStoryboard storyboardWithName:@"GameScreen" bundle:nil] instantiateInitialViewController];
-    [self.navigationController pushViewController:destination animated:YES];
+    
+    JeopardyBoardViewController *destination = [[UIStoryboard storyboardWithName:@"JeopardyBoard" bundle:nil] instantiateInitialViewController];
+    destination.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    [self presentViewController:destination animated:YES completion:nil];
 }
 
 @end

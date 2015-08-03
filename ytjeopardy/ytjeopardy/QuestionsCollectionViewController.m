@@ -11,7 +11,7 @@
 #import "JeopardyManager.h"
 #import "QuestionRetriever.h"
 #import "Question.h"
-#import "QuestionViewController.h"
+#import "AnsweringScreenViewController.h"
 
 #define _RGB(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 #define COUNT_OF_CATEGORIES 4
@@ -19,11 +19,6 @@
 
 @interface QuestionsCollectionViewController ()
 
-@property UIColor *categoryBackgroundColor;
-@property UIColor *categoryTextColor;
-@property UIColor *questionBackgroundColor;
-@property UIColor *questionTextColor;
-@property UIColor *answeredQuestionTextColor;
 @property NSArray *questions;
 @property NSArray *categories;
 
@@ -31,7 +26,8 @@
 
 @implementation QuestionsCollectionViewController
 
-static NSString * const reuseIdentifier = @"JeopardyCell";
+static NSString * const reuseIdentifier = @"CategoryCell";
+static NSString * const pointsCellReuseIdentifier = @"PointsCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -44,7 +40,6 @@ static NSString * const reuseIdentifier = @"JeopardyCell";
     // [self.collectionView registerClass:[QuestionsCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
-    [self setupColors];
     [self initBoard];
 }
 
@@ -90,15 +85,6 @@ static NSString * const reuseIdentifier = @"JeopardyCell";
     return categories;
 }
 
-- (void) setupColors
-{
-    self.categoryBackgroundColor = _RGB(45, 52, 230, 1.0);
-    self.questionBackgroundColor = _RGB(31, 36, 163, 1.0);
-    self.categoryTextColor = _RGB(255, 255, 0, 1.0);
-    self.questionTextColor =  _RGB(255, 255, 0, 1.0);
-    
-}
-
 - (NSArray *) setupQuestions
 {
     NSMutableArray *questions = [NSMutableArray arrayWithCapacity:self.categories.count];
@@ -139,31 +125,26 @@ static NSString * const reuseIdentifier = @"JeopardyCell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0)
     {
-        return [self getCellForCategory:indexPath forCollectionView:collectionView];
+        return [self cellForCategory:indexPath forCollectionView:collectionView];
     }
     else
     {
-        return [self getCellForQuestion:indexPath forCollectionView:collectionView];
+        return [self cellForQuestion:indexPath forCollectionView:collectionView];
     }
 }
 
-- (UICollectionViewCell *) getCellForCategory:(NSIndexPath *)indexPath forCollectionView:(UICollectionView *)collectionView
+- (UICollectionViewCell *) cellForCategory:(NSIndexPath *)indexPath forCollectionView:(UICollectionView *)collectionView
 {
     QuestionsCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    cell.backgroundColor = self.categoryBackgroundColor;
     cell.displayLabel.text = [self.categories[indexPath.row] uppercaseString];
-    cell.displayLabel.textColor = [UIColor yellowColor];
-    [cell.displayLabel setFont:[UIFont systemFontOfSize:18.0]];
     return cell;
 }
 
-- (UICollectionViewCell *) getCellForQuestion:(NSIndexPath *)indexPath forCollectionView:(UICollectionView *)collectionView
+- (UICollectionViewCell *) cellForQuestion:(NSIndexPath *)indexPath forCollectionView:(UICollectionView *)collectionView
 {
-    QuestionsCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    cell.backgroundColor = self.questionBackgroundColor;
+    QuestionsCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:pointsCellReuseIdentifier forIndexPath:indexPath];
     int points = (int)indexPath.section * 100;
     cell.displayLabel.text = [NSString stringWithFormat:@"$%d", points];
-    [cell.displayLabel setFont:[UIFont systemFontOfSize:40.0 weight:10]];
     
     if ([self questionAtIndexPath:indexPath].questionAsked)
     {
@@ -218,8 +199,10 @@ static NSString * const reuseIdentifier = @"JeopardyCell";
     Question *question = [self.jm startQuestionForCategory:self.categories[indexPath.row] index:(indexPath.section - 1)];
     [collectionView reloadItemsAtIndexPaths:@[indexPath]];
     
-    QuestionViewController *destination = [[UIStoryboard storyboardWithName:@"Question" bundle:nil] instantiateInitialViewController];
+    AnsweringScreenViewController *destination = [[UIStoryboard storyboardWithName:@"AnsweringScreen" bundle:nil] instantiateInitialViewController];
+    destination.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     destination.question = question;
+    destination.jm = self.jm;
     [self presentViewController:destination animated:YES completion:nil];
 }
 

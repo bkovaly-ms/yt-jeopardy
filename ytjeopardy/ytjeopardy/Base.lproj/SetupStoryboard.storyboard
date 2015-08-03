@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gMV-w5-oG8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="O6x-5b-TOw">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="gyparody.ttf">
+            <string>Gyparody</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Start View Controller-->
         <scene sceneID="P7Q-4d-h4F">
@@ -15,27 +19,18 @@
                         <viewControllerLayoutGuide type="bottom" id="5DM-y5-yhM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="JLO-VH-kio">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jeopardy!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHk-fH-pKW">
-                                <rect key="frame" x="183" y="0.0" width="233.5" height="64.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="54"/>
-                                <color key="textColor" red="1" green="0.95464565377255761" blue="0.55530165085053262" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="highlightedColor" red="0.98400595127561541" green="1" blue="0.21353230481248031" alpha="1" colorSpace="calibratedRGB"/>
-                                <variation key="widthClass=regular" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="234" y="63" width="323" height="29"/>
-                                </variation>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5PR-gT-osu">
-                                <rect key="frame" x="209" y="144" width="181" height="39.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="209" y="153" width="180.5" height="39.5"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="33"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team names:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BpN-g0-CJS">
-                                <rect key="frame" x="56" y="237" width="162.5" height="33.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teams" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BpN-g0-CJS">
+                                <rect key="frame" x="56" y="295" width="75" height="33.5"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <variation key="widthClass=regular" misplaced="YES">
@@ -43,8 +38,8 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team 3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ToI-W9-Wxh">
-                                <rect key="frame" x="56" y="402.5" width="88.5" height="33.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <rect key="frame" x="56" y="465" width="91.5" height="35"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <variation key="widthClass=regular" misplaced="YES">
@@ -52,10 +47,9 @@
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EQR-Xb-4IK" colorLabel="IBBuiltInLabel-Green">
-                                <rect key="frame" x="481" y="392" width="61" height="47"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <rect key="frame" x="472" y="454" width="70" height="48"/>
+                                <fontDescription key="fontDescription" name="Optima-ExtraBlack" family="Optima" pointSize="29"/>
                                 <state key="normal" title="Start">
-                                    <color key="titleColor" red="0.65592145349999997" green="0.90601184639999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -63,8 +57,8 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWJ-Yy-aBv">
-                                <rect key="frame" x="56" y="349" width="88.5" height="33.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <rect key="frame" x="56" y="409" width="112" height="35.5"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <variation key="widthClass=regular" misplaced="YES">
@@ -72,10 +66,9 @@
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qqn-JV-6o9">
-                                <rect key="frame" x="431" y="190" width="30" height="58"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <rect key="frame" x="470" y="208" width="30" height="58"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="38"/>
                                 <state key="normal" title="+">
-                                    <color key="titleColor" red="0.65592145346273101" green="0.90601184639085597" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=regular" ambiguous="YES" misplaced="YES">
@@ -86,20 +79,31 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rCc-4h-OLz">
-                                <rect key="frame" x="56" y="295" width="88.5" height="33.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <rect key="frame" x="56" y="354" width="89.5" height="35"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <variation key="widthClass=regular" misplaced="YES">
                                     <rect key="frame" x="96" y="281" width="250.5" height="33.5"/>
                                 </variation>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Code Jeopardy!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHk-fH-pKW">
+                                <rect key="frame" x="139" y="20" width="320.5" height="53.5"/>
+                                <fontDescription key="fontDescription" name="Gyparody" family="Gyparody" pointSize="54"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="0.98400595127561541" green="1" blue="0.21353230481248031" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="widthClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="234" y="63" width="323" height="29"/>
+                                </variation>
+                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Team Yolo" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1UO-gH-aLJ">
-                                <rect key="frame" x="189" y="204" width="222" height="30"/>
+                                <rect key="frame" x="150" y="212" width="300" height="50"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="1UO-gH-aLJ" secondAttribute="height" multiplier="37:5" id="Mwl-z0-wIc"/>
+                                    <constraint firstAttribute="width" constant="300" id="dbN-HK-hWx"/>
+                                    <constraint firstAttribute="height" constant="50" id="tn0-CH-ptk"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="26"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=regular" ambiguous="YES" misplaced="YES">
                                     <rect key="frame" x="289" y="191" width="222" height="30"/>
@@ -107,22 +111,17 @@
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.17562909512895683" green="0.20215171614315111" blue="0.90001578282828287" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="1" green="0.95464565379999999" blue="0.55530165090000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="BpN-g0-CJS" firstAttribute="leading" secondItem="JLO-VH-kio" secondAttribute="leadingMargin" constant="40" id="8hx-uH-22g"/>
                             <constraint firstItem="ToI-W9-Wxh" firstAttribute="centerY" secondItem="EQR-Xb-4IK" secondAttribute="centerY" constant="4" id="BiY-Bg-3Rd"/>
                             <constraint firstAttribute="centerX" secondItem="1UO-gH-aLJ" secondAttribute="centerX" id="HNR-jj-q3p"/>
                             <constraint firstItem="ZWJ-Yy-aBv" firstAttribute="top" secondItem="rCc-4h-OLz" secondAttribute="bottom" constant="20" id="Krb-rl-ncp"/>
-                            <constraint firstAttribute="centerX" secondItem="ZWJ-Yy-aBv" secondAttribute="centerX" constant="179" id="N9A-xu-qDw"/>
                             <constraint firstItem="rCc-4h-OLz" firstAttribute="top" secondItem="BpN-g0-CJS" secondAttribute="bottom" constant="25" id="Sxg-nJ-vx4"/>
-                            <constraint firstItem="5DM-y5-yhM" firstAttribute="top" secondItem="EQR-Xb-4IK" secondAttribute="bottom" constant="186" id="VJv-Tn-94Y"/>
-                            <constraint firstItem="EQR-Xb-4IK" firstAttribute="leading" secondItem="ToI-W9-Wxh" secondAttribute="trailing" constant="294" id="VYR-ji-QXH"/>
                             <constraint firstItem="qqn-JV-6o9" firstAttribute="leading" secondItem="1UO-gH-aLJ" secondAttribute="trailing" constant="20" id="cgd-yC-34N"/>
                             <constraint firstAttribute="centerX" secondItem="aHk-fH-pKW" secondAttribute="centerX" id="cqP-3r-1PN"/>
                             <constraint firstItem="1UO-gH-aLJ" firstAttribute="top" secondItem="5PR-gT-osu" secondAttribute="bottom" constant="20" id="dFE-Au-tm4"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="BpN-g0-CJS" secondAttribute="trailing" constant="408" id="jao-cx-gdc"/>
                             <constraint firstItem="ZWJ-Yy-aBv" firstAttribute="leading" secondItem="JLO-VH-kio" secondAttribute="leadingMargin" constant="40" id="lgy-gL-m6F"/>
-                            <constraint firstAttribute="centerX" secondItem="rCc-4h-OLz" secondAttribute="centerX" constant="178.75" id="mgP-ZV-WuB"/>
-                            <constraint firstAttribute="centerX" secondItem="ToI-W9-Wxh" secondAttribute="centerX" constant="178.75" id="mvy-cB-equ"/>
                             <constraint firstItem="5PR-gT-osu" firstAttribute="top" secondItem="aHk-fH-pKW" secondAttribute="bottom" constant="80" id="n4D-fF-neX"/>
                             <constraint firstItem="aHk-fH-pKW" firstAttribute="top" secondItem="o6q-2P-nHL" secondAttribute="bottom" id="nb9-gP-unI"/>
                             <constraint firstItem="qqn-JV-6o9" firstAttribute="centerY" secondItem="1UO-gH-aLJ" secondAttribute="centerY" id="t75-t0-ofx"/>
@@ -133,16 +132,6 @@
                             <constraint firstAttribute="centerX" secondItem="5PR-gT-osu" secondAttribute="centerX" id="xjS-eq-Vmh"/>
                             <constraint firstItem="ToI-W9-Wxh" firstAttribute="leading" secondItem="JLO-VH-kio" secondAttribute="leadingMargin" constant="40" id="zbU-Bc-KcI"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="jao-cx-gdc"/>
-                                <exclude reference="mgP-ZV-WuB"/>
-                                <exclude reference="N9A-xu-qDw"/>
-                                <exclude reference="mvy-cB-equ"/>
-                                <exclude reference="VJv-Tn-94Y"/>
-                                <exclude reference="VYR-ji-QXH"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="XlJ-4c-2Eg"/>
                     <connections>
@@ -157,28 +146,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lLu-pc-Al9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1394" y="478"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="wlv-Rl-JL6">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gMV-w5-oG8" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="ERX-OZ-ceA">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.1764705882352941" green="0.20392156862745098" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="0.032380194165778087" green="0.044474914421333445" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="O6x-5b-TOw" kind="relationship" relationship="rootViewController" id="Xkb-oq-1dI"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="myO-CZ-hGM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="582" y="478"/>
         </scene>
     </scenes>
 </document>
