@@ -9,6 +9,7 @@
 #import "QuestionViewController.h"
 #import "JeopardyManager.h"
 #import "Team.h"
+#import "GameScreenViewController.h"
 
 @interface QuestionViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *rightAnswerButton;
@@ -91,10 +92,20 @@
     }
 }
 
+
+
+
 - (void) handleAnswer:(BOOL)answeredCorrectly
-{
-    
-}
+    {
+        // Get the result from JeopardyManager questionAnswered.
+        if ([[JeopardyManager sharedInstance]questionAnswered:answeredCorrectly] == YES)
+        {
+            [self.navigationController popViewControllerAnimated:YES];
+        } else {
+            [self startQuestion];
+        }
+
+    }
 
 
 
