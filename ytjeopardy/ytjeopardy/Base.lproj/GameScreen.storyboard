@@ -314,7 +314,7 @@
                                     <rect key="frame" x="707" y="185" width="76" height="20.5"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zb-Ui-bmD" customClass="JeopordyButton">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zb-Ui-bmD" customClass="JeopordyButton">
                                 <rect key="frame" x="716" y="250" width="34" height="30"/>
                                 <state key="normal" title="$100">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
