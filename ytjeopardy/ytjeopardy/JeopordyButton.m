@@ -17,5 +17,18 @@
     // Drawing code
 }
 */
+-(instancetype) initWithCoder:(NSCoder *)aDecoder
+{
+    if (self = [super initWithCoder:aDecoder])
+    {
+        
+        [self setTitleColor:[UIColor clearColor] forState:UIControlStateDisabled];
+        
+    }
+    return self;
+}
+
+
+
 
 @end

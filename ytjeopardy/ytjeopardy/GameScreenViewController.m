@@ -45,6 +45,10 @@
     
     [self.navigationController pushViewController:destination animated:YES];
     
+    sender.enabled = NO;
+    
+    
+    
 
 }
 
