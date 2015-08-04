@@ -27,10 +27,15 @@
 
 @implementation QuestionViewController
 - (IBAction)rightAnswerButtonTapped:(id)sender  {
- 
     [self.questionTimer invalidate];
     self.timer = nil;
     [self handleAnswer:YES];
+}
+
+- (IBAction)wrongAsnwerTapped:(id)sender {
+    [self.questionTimer invalidate];
+    self.timer = nil;
+    [self handleAnswer:NO];
 }
 
 - (void)viewDidLoad {
