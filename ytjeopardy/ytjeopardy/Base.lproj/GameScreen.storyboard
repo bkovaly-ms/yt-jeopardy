@@ -59,7 +59,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                    <rect key="frame" x="372" y="726" width="55.5" height="20.5"/>
+                                    <rect key="frame" x="372" y="726" width="55" height="20"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team 3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y77-YH-RBe">
@@ -89,7 +89,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CodeJeopardy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEE-MD-Owd">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="CodeJeopardy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEE-MD-Owd">
                                 <rect key="frame" x="197" y="40" width="205" height="39.5"/>
                                 <fontDescription key="fontDescription" name="Gyparody" family="Gyparody" pointSize="30"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -98,7 +98,7 @@
                                     <rect key="frame" x="297" y="40" width="205" height="39.5"/>
                                 </variation>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FgH-DU-EVh">
+                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FgH-DU-EVh">
                                 <rect key="frame" x="295" y="267" width="9" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -118,6 +118,9 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="categoryString" value="Language"/>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="716" y="571" width="34" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="buttonTapped:" destination="Zgk-NG-gdW" eventType="touchUpInside" id="0S3-a3-FMs"/>
                                 </connections>
@@ -135,13 +138,13 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="categoryString" value="Write It"/>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                    <rect key="frame" x="563" y="572" width="34" height="30"/>
+                                    <rect key="frame" x="563" y="571" width="34" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="buttonTapped:" destination="Zgk-NG-gdW" eventType="touchUpInside" id="MxJ-Rm-SAC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4pc-Zk-TKy" customClass="JeopordyButton">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4pc-Zk-TKy" customClass="JeopordyButton">
                                 <rect key="frame" x="410" y="572" width="34" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="$500">
@@ -153,6 +156,9 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="categoryString" value="Syntax"/>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="410" y="568.5" width="34" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="buttonTapped:" destination="Zgk-NG-gdW" eventType="touchUpInside" id="ChY-hA-vty"/>
                                 </connections>
@@ -169,6 +175,9 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="categoryString" value="Language"/>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="716" y="487" width="34" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="buttonTapped:" destination="Zgk-NG-gdW" eventType="touchUpInside" id="jjs-9E-9dI"/>
                                 </connections>
@@ -185,11 +194,14 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="categoryString" value="Write It"/>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="562" y="487" width="34" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="buttonTapped:" destination="Zgk-NG-gdW" eventType="touchUpInside" id="8Nh-B5-9O5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oOG-Sy-6In" customClass="JeopordyButton">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oOG-Sy-6In" customClass="JeopordyButton">
                                 <rect key="frame" x="410" y="488" width="34" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="$400">
@@ -201,6 +213,9 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="categoryString" value="Syntax"/>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="410" y="484.5" width="34" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="buttonTapped:" destination="Zgk-NG-gdW" eventType="touchUpInside" id="GYW-Gd-QAQ"/>
                                 </connections>
@@ -217,6 +232,9 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="categoryString" value="Language"/>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="716" y="411" width="34" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="buttonTapped:" destination="Zgk-NG-gdW" eventType="touchUpInside" id="lLA-Wc-qn0"/>
                                 </connections>
@@ -234,13 +252,13 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="categoryString" value="Write It"/>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                    <rect key="frame" x="562" y="412" width="34" height="30"/>
+                                    <rect key="frame" x="562" y="411" width="34" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="buttonTapped:" destination="Zgk-NG-gdW" eventType="touchUpInside" id="SdU-vv-Qgg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q3X-0J-D2R" customClass="JeopordyButton">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q3X-0J-D2R" customClass="JeopordyButton">
                                 <rect key="frame" x="410" y="412" width="34" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="$300">
@@ -252,6 +270,9 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="categoryString" value="Syntax"/>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="410" y="408.5" width="34" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="buttonTapped:" destination="Zgk-NG-gdW" eventType="touchUpInside" id="aAf-W5-aSf"/>
                                 </connections>
@@ -268,6 +289,9 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="categoryString" value="Language"/>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="716" y="330" width="34" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="buttonTapped:" destination="Zgk-NG-gdW" eventType="touchUpInside" id="a5l-ez-n1c"/>
                                 </connections>
@@ -277,14 +301,20 @@
                                 <fontDescription key="fontDescription" name="Gyparody" family="Gyparody" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="252" y="185" width="50.5" height="20"/>
+                                </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Syntax" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zb-ER-ZPb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Syntax" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zb-ER-ZPb">
                                 <rect key="frame" x="403" y="184" width="53" height="20.5"/>
                                 <fontDescription key="fontDescription" name="Gyparody" family="Gyparody" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="403" y="179.5" width="52.5" height="20"/>
+                                </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write it" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7HP-Bl-slL">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Write it" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7HP-Bl-slL">
                                 <rect key="frame" x="552" y="185" width="54" height="20.5"/>
                                 <fontDescription key="fontDescription" name="Gyparody" family="Gyparody" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -293,7 +323,7 @@
                                     <rect key="frame" x="552" y="185" width="56" height="20.5"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zjD-vK-7nw">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Language" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zjD-vK-7nw">
                                 <rect key="frame" x="705" y="185" width="76" height="20.5"/>
                                 <fontDescription key="fontDescription" name="Gyparody" family="Gyparody" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -302,6 +332,24 @@
                                     <rect key="frame" x="707" y="185" width="76" height="20.5"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zb-Ui-bmD" customClass="JeopordyButton">
+                                <rect key="frame" x="716" y="250" width="34" height="30"/>
+                                <state key="normal" title="$100">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="questionValue">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="categoryString" value="Language"/>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="716" y="249" width="34" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="Zgk-NG-gdW" eventType="touchUpInside" id="VD7-Uu-kzd"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k5t-RG-2TS" customClass="JeopordyButton">
                                 <rect key="frame" x="254" y="331" width="34" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -350,7 +398,7 @@
                                     <action selector="buttonTapped:" destination="Zgk-NG-gdW" eventType="touchUpInside" id="DPA-sE-0Ch"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZO3-mz-Q99" customClass="JeopordyButton">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZO3-mz-Q99" customClass="JeopordyButton">
                                 <rect key="frame" x="410" y="331" width="34" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="$200">
@@ -362,6 +410,9 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="categoryString" value="Syntax"/>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="410" y="327.5" width="34" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="buttonTapped:" destination="Zgk-NG-gdW" eventType="touchUpInside" id="SMu-Iy-nz9"/>
                                 </connections>
@@ -394,6 +445,9 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="categoryString" value="Write It"/>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="562" y="330" width="34" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="buttonTapped:" destination="Zgk-NG-gdW" eventType="touchUpInside" id="Ken-C9-Ba1"/>
                                 </connections>
@@ -426,7 +480,7 @@
                                     <action selector="buttonTapped:" destination="Zgk-NG-gdW" eventType="touchUpInside" id="53J-ge-i1a"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kf4-q9-TSq" customClass="JeopordyButton">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kf4-q9-TSq" customClass="JeopordyButton">
                                 <rect key="frame" x="410" y="251" width="34" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="$100">
@@ -445,25 +499,6 @@
                                     <action selector="buttonTapped:" destination="Zgk-NG-gdW" eventType="touchUpInside" id="ISN-K2-TZr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zb-Ui-bmD" customClass="JeopordyButton">
-                                <rect key="frame" x="716" y="250" width="34" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="$100">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="questionValue">
-                                        <integer key="value" value="0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="categoryString" value="Language"/>
-                                </userDefinedRuntimeAttributes>
-                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                    <rect key="frame" x="716" y="251" width="34" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="buttonTapped:" destination="Zgk-NG-gdW" eventType="touchUpInside" id="VD7-Uu-kzd"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJ1-f4-zBj" customClass="JeopordyButton">
                                 <rect key="frame" x="562" y="253" width="34" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -477,7 +512,7 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="categoryString" value="Write It"/>
                                 </userDefinedRuntimeAttributes>
                                 <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                    <rect key="frame" x="562" y="254" width="34" height="30"/>
+                                    <rect key="frame" x="562" y="252" width="34" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="buttonTapped:" destination="Zgk-NG-gdW" eventType="touchUpInside" id="elb-3b-VqT"/>
@@ -578,6 +613,7 @@
                                 <include reference="4zb-ER-ZPb"/>
                                 <include reference="7HP-Bl-slL"/>
                                 <include reference="zjD-vK-7nw"/>
+                                <include reference="0zb-Ui-bmD"/>
                                 <include reference="k5t-RG-2TS"/>
                                 <include reference="Pge-EW-v8f"/>
                                 <include reference="Bd1-Kp-K8k"/>
@@ -587,7 +623,6 @@
                                 <include reference="R4h-uk-l4Q"/>
                                 <include reference="Sit-0U-7d9"/>
                                 <include reference="Kf4-q9-TSq"/>
-                                <include reference="0zb-Ui-bmD"/>
                                 <include reference="dJ1-f4-zBj"/>
                             </mask>
                             <mask key="constraints">
