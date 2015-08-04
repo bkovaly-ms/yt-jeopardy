@@ -52,7 +52,9 @@
     //this string displays the label that identifies what team is currently nswering the question
     //self.teamName.text = [NSString stringWithFormat:@"Team %@",self.teamName];
 
+
     self.allowedTime = self.question.time;
+    
     
     [self startQuestion];
 }
@@ -86,9 +88,31 @@
     self.timer.text = [NSString stringWithFormat:@"%lu seconds", self.secondsRemaining];
     
     if (self.secondsRemaining == 0)
+        
     {
-        self.allowedTime = self.allowedTime / 2;
-        [self handleAnswer:NO];
+        [self.questionTimer invalidate];
+        self.questionTimer = nil;
+       
+        UIAlertController *alert = [UIAlertController
+                                     alertControllerWithTitle:@"Out of Time!"
+                                     message:@"Did the team answer correctly?"
+                                     preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction *rightAnswer = [UIAlertAction actionWithTitle:@"Right" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action)
+                                      {
+                                          [self handleAnswer:YES];
+                                          
+                                      }];
+        UIAlertAction *wrongAnswer = [UIAlertAction actionWithTitle:@"Wrong" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action)
+                                      {
+                                        self.allowedTime = self.allowedTime / 2;
+                                        [self handleAnswer:NO];
+                                          
+                                      }];
+        [alert addAction:rightAnswer];
+        [alert addAction:wrongAnswer];
+        
+        [self presentViewController: alert animated:YES completion:nil];
     }
 }
 
